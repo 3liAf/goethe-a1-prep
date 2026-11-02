@@ -109,6 +109,10 @@ export interface SchreibenTeil2Task {
   sampleSolution: string;
   grammarFocus: string[];
   hacks: string[];
+  leitpunkteRules?: {
+    keywords: string[];
+    tip: string;
+  }[];
 }
 
 // Sprechen

@@ -41,18 +41,31 @@ export function evaluateSchreibenTeil2(
   // 1. Check Salutation
   const hasSalutation =
     lower.includes('sehr geehrte') ||
+    lower.includes('sehr geehrter') ||
     lower.includes('hallo') ||
     lower.includes('liebe') ||
     lower.includes('lieber') ||
-    lower.includes('guten tag');
+    lower.includes('guten tag') ||
+    lower.includes('guten morgen') ||
+    lower.includes('guten abend');
 
   // 2. Check Closing
   const hasClosing =
     lower.includes('mit freundlichen grüßen') ||
+    lower.includes('mit freundlichen gruessen') ||
     lower.includes('freundliche grüße') ||
+    lower.includes('freundliche gruesse') ||
     lower.includes('viele grüße') ||
+    lower.includes('viele gruesse') ||
     lower.includes('herzliche grüße') ||
+    lower.includes('herzliche gruesse') ||
     lower.includes('beste grüße') ||
+    lower.includes('beste gruesse') ||
+    lower.includes('liebe grüße') ||
+    lower.includes('liebe gruesse') ||
+    lower.includes('auf wiedersehen') ||
+    lower.includes('tschüss') ||
+    lower.includes('tschuess') ||
     lower.includes('dein') ||
     lower.includes('deine');
 
@@ -60,7 +73,12 @@ export function evaluateSchreibenTeil2(
     let covered = false;
     let tip = '';
 
-    if (exam.id === 'modellsatz-1') {
+    // If explicit rules are provided in the exam data:
+    if (exam.schreiben.teil2.leitpunkteRules && exam.schreiben.teil2.leitpunkteRules[index]) {
+      const rule = exam.schreiben.teil2.leitpunkteRules[index];
+      covered = rule.keywords.some(kw => lower.includes(kw.toLowerCase()));
+      tip = rule.tip;
+    } else if (exam.id === 'modellsatz-1') {
       if (index === 0) {
         covered = lower.includes('august') || lower.includes('dresden') || lower.includes('besuchen') || lower.includes('reise');
         tip = 'Mention visiting Dresden in August ("Ich möchte im August Dresden besuchen").';
@@ -82,8 +100,7 @@ export function evaluateSchreibenTeil2(
         covered = lower.includes('unterlagen') || lower.includes('material') || lower.includes('hausaufgabe') || lower.includes('schicken');
         tip = 'Ask for course materials/homework ("Schicken Sie mir bitte die Hausaufgaben").';
       }
-    } else {
-      // Modellsatz 3
+    } else if (exam.id === 'modellsatz-3') {
       if (index === 0) {
         covered = lower.includes('dank') || lower.includes('einladung') || lower.includes('geburtstag');
         tip = 'Thank for birthday invitation ("Vielen Dank für die Einladung").';
@@ -94,6 +111,10 @@ export function evaluateSchreibenTeil2(
         covered = lower.includes('nächste woche') || lower.includes('treffen') || lower.includes('kaffee') || lower.includes('zeit');
         tip = 'Suggest meeting next week ("Treffen wir uns nächste Woche?").';
       }
+    } else {
+      const keywords = lp.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+      covered = keywords.some(kw => lower.includes(kw));
+      tip = `Address the point: "${lp}".`;
     }
 
     return { point: lp, covered, tip };
