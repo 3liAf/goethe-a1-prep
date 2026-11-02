@@ -1,4 +1,4 @@
-:HL["/goethe-a1-prep/_next/static/chunks/0lkkk1er72l3b.css","style"]
+:HL["/goethe-a1-prep/_next/static/chunks/1r9k0-j5o9dc5.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"6KQ-76N1PBtGjioUZPctX","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"V-a_jb4D-EOOUbvcSBdeJ","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
