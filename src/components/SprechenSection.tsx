@@ -23,6 +23,8 @@ import {
   Edit3,
   ExternalLink,
   ShieldAlert,
+  Eye,
+  EyeOff,
 } from 'lucide-react';
 
 interface SprechenSectionProps {
@@ -41,6 +43,10 @@ export function SprechenSection({
 
   // Manual checked status
   const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({});
+
+  // Hidden hints/answers state (Hidden by default for realistic examination simulation)
+  const [revealedHints, setRevealedHints] = useState<Record<string, boolean>>({});
+  const [revealAllHints, setRevealAllHints] = useState<boolean>(false);
 
   // Microphone practice state
   const [activeRecordingId, setActiveRecordingId] = useState<string | null>(null);
@@ -86,6 +92,27 @@ export function SprechenSection({
       }
     };
   }, [stopRecordingCallback]);
+
+  // Toggle single hint
+  const toggleHint = (id: string) => {
+    setRevealedHints((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
+  // Toggle all hints globally
+  const toggleAllHints = () => {
+    const next = !revealAllHints;
+    setRevealAllHints(next);
+    if (!next) {
+      setRevealedHints({});
+    }
+  };
+
+  const isHintRevealed = (id: string) => {
+    return revealAllHints || Boolean(revealedHints[id]);
+  };
 
   // Audio Playback Handler (TTS)
   const handleSpeak = (id: string, text: string) => {
@@ -442,26 +469,59 @@ export function SprechenSection({
           </button>
         </div>
 
-        {/* Practice Stats Bar */}
-        <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 my-3 flex flex-wrap items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-slate-700">Dein Sprech-Training:</span>
-            <span className="bg-[#007346] text-white font-bold px-2 py-0.5 rounded-full">
-              {recordedCount} / {totalPracticeItems} Sätze geübt
-            </span>
-          </div>
-
-          {avgScore !== null && (
-            <div className="flex items-center gap-1.5">
-              <span className="text-slate-600">Durchschnittliche Aussprache:</span>
-              <strong className="text-emerald-700 text-sm">{avgScore}%</strong>
+        {/* Practice Stats Bar & Global Answer Reveal Toggle */}
+        <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 my-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex items-center gap-2">
+              <span className="font-bold text-slate-700">Dein Training:</span>
+              <span className="bg-[#007346] text-white font-bold px-2 py-0.5 rounded-full">
+                {recordedCount} / {totalPracticeItems} geübt
+              </span>
             </div>
-          )}
 
-          <div className="flex items-center gap-1.5 text-slate-500">
-            <Mic className="w-3.5 h-3.5 text-emerald-600" />
-            <span>{isRecognitionAvailable ? 'Mikrofon aktiv' : 'Audio-Modus aktiv'}</span>
+            {avgScore !== null && (
+              <div className="flex items-center gap-1.5">
+                <span className="text-slate-600">Aussprache-Ø:</span>
+                <strong className="text-emerald-700 text-sm">{avgScore}%</strong>
+              </div>
+            )}
+
+            <div className="flex items-center gap-1.5 text-slate-500">
+              <Mic className="w-3.5 h-3.5 text-emerald-600" />
+              <span>{isRecognitionAvailable ? 'Mikrofon aktiv' : 'Audio-Modus'}</span>
+            </div>
           </div>
+
+          {/* Global Toggle for Answer Hints */}
+          <button
+            type="button"
+            onClick={toggleAllHints}
+            className={`min-h-[36px] flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all shadow-2xs active:scale-95 ${
+              revealAllHints
+                ? 'bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300'
+                : 'bg-white hover:bg-slate-50 text-slate-700 border border-slate-300'
+            }`}
+          >
+            {revealAllHints ? (
+              <>
+                <EyeOff className="w-3.5 h-3.5 text-amber-700" />
+                <span>Alle Musterantworten verbergen</span>
+              </>
+            ) : (
+              <>
+                <Eye className="w-3.5 h-3.5 text-[#007346]" />
+                <span>Alle Musterantworten einblenden</span>
+              </>
+            )}
+          </button>
+        </div>
+
+        {/* Real Exam Mode Callout Notice */}
+        <div className="flex items-center gap-2 bg-emerald-50/70 border border-emerald-200 rounded-lg p-2.5 text-xs text-emerald-900">
+          <Lightbulb className="w-4 h-4 text-[#007346] shrink-0" />
+          <span>
+            <strong>🔒 Echtes Prüfungstraining:</strong> Die Musterantworten sind standardmäßig ausgeblendet. Versuchen Sie zuerst frei zu sprechen! Bei Bedarf tippen Sie auf <em>&ldquo;Musterantwort zeigen&rdquo;</em>.
+          </span>
         </div>
 
         {/* Phone Tips Callout */}
@@ -473,16 +533,16 @@ export function SprechenSection({
             </div>
             <ul className="list-disc list-inside space-y-1 text-blue-800 leading-relaxed">
               <li>
-                <strong>1. Anhören:</strong> Tippe auf das Lautsprecher-Symbol (<Volume2 className="w-3 h-3 inline" />), um die native deutsche Aussprache zu hören.
+                <strong>1. Freies Sprechen:</strong> Versuche den Satz zuerst ohne Hilfe zu formulieren und tippe auf das Mikrofon (<Mic className="w-3 h-3 inline" />).
               </li>
               <li>
-                <strong>2. Nachsprechen mit Mikrofon:</strong> Tippe auf das Mikrofon (<Mic className="w-3 h-3 inline" />). Sprich den Satz auf Deutsch. Sobald du pausierst oder auf <em>&ldquo;Stopp & Auswerten&rdquo;</em> tippst, erscheint deine Auswertung!
+                <strong>2. Musterlösung ansehen:</strong> Falls du nicht weiterweißt, tippe auf <em>&ldquo;Musterantwort zeigen&rdquo;</em>, um den Satz und Tipps aufzudecken.
               </li>
               <li>
-                <strong>3. Sofortige KI-Analyse:</strong> Die App vergleicht deine Wörter, erkennt Fehler und gibt dir eine Punktzahl sowie wertvolle Tipps für die Goethe-Prüfer!
+                <strong>3. Audio-Vorbild:</strong> Tippe auf das Lautsprecher-Symbol (<Volume2 className="w-3 h-3 inline" />), um die korrekte Aussprache anzuhören.
               </li>
               <li>
-                <strong>iPhone-Berechtigung:</strong> Bitte erlaube Safari den Mikrofon-Zugriff (&ldquo;Erlauben&rdquo; antippen).
+                <strong>4. Sofortige KI-Analyse:</strong> Sobald du auf <em>&ldquo;Stopp & Auswerten&rdquo;</em> tippst, erscheint deine Auswertung mit Trefferquote und Feedback!
               </li>
             </ul>
           </div>
@@ -511,7 +571,7 @@ export function SprechenSection({
             Persönliche Vorstellung anhand von 7 Stichworten (5 Punkte)
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-            Höre die Aussprache an und sprich jeden Satz mit dem Mikrofon-Button nach.
+            Formulieren Sie Ihren Satz zum jeweiligen Stichwort. Bei Bedarf können Sie die Musterantwort aufdecken.
           </p>
         </div>
 
@@ -521,6 +581,7 @@ export function SprechenSection({
             const isPlaying = activeSpeechIndex === cardId;
             const isRecording = activeRecordingId === cardId;
             const isChecked = checkedItems[cardId] || false;
+            const isRevealed = isHintRevealed(cardId);
 
             return (
               <div
@@ -533,15 +594,42 @@ export function SprechenSection({
               >
                 <div className="flex items-start justify-between gap-3 mb-2">
                   <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="bg-slate-200 text-slate-800 text-[10px] font-black px-2 py-0.5 rounded uppercase">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="bg-[#007346] text-white text-[11px] font-black px-2.5 py-0.5 rounded-md uppercase tracking-wide">
                         {item.keyword}
                       </span>
                       <span className="text-xs text-slate-500 italic">{item.englishMeaning}</span>
                     </div>
-                    <p className="text-sm font-bold text-slate-900 leading-snug">
-                      {item.germanPhrase}
-                    </p>
+
+                    {/* German Answer Phrase: Hidden by default for real exam testing */}
+                    {isRevealed ? (
+                      <p className="text-sm font-bold text-slate-900 leading-snug animate-fadeIn">
+                        {item.germanPhrase}
+                      </p>
+                    ) : (
+                      <p className="text-xs text-slate-400 italic">
+                        Musterantwort verborgen (Sprechen Sie frei!)
+                      </p>
+                    )}
+
+                    {/* Toggle Button to open/close answer */}
+                    <button
+                      type="button"
+                      onClick={() => toggleHint(cardId)}
+                      className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-600 hover:text-slate-900 bg-white border border-slate-300 px-2.5 py-1 rounded-md transition-colors shadow-2xs active:scale-95"
+                    >
+                      {isRevealed ? (
+                        <>
+                          <EyeOff className="w-3 h-3 text-slate-500" />
+                          <span>Verbergen</span>
+                        </>
+                      ) : (
+                        <>
+                          <Eye className="w-3 h-3 text-[#007346]" />
+                          <span>Musterantwort zeigen</span>
+                        </>
+                      )}
+                    </button>
                   </div>
 
                   {/* Action Buttons - Min 44px tap targets for mobile */}
@@ -608,11 +696,12 @@ export function SprechenSection({
               const cardId = `q-${i}`;
               const isPlaying = activeSpeechIndex === cardId;
               const isRecording = activeRecordingId === cardId;
+              const isRevealed = isHintRevealed(cardId);
 
               return (
                 <div key={i} className="bg-white p-3.5 rounded-xl border border-amber-200/80">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                    <span className="text-xs font-bold text-slate-800">
+                    <span className="text-xs sm:text-sm font-bold text-slate-900">
                       Frage {i + 1}: &ldquo;{q.question}&rdquo;
                     </span>
                     <div className="flex items-center gap-2">
@@ -640,10 +729,35 @@ export function SprechenSection({
                     </div>
                   </div>
 
-                  <p className="text-xs text-slate-800 font-mono bg-slate-50 p-2 rounded-lg border border-slate-200">
-                    Musterantwort: <strong>{q.sampleAnswer}</strong>
-                  </p>
-                  <p className="text-[11px] text-amber-800 mt-1.5 italic">💡 Hack: {q.tip}</p>
+                  {/* Toggle Button for Question Sample Answer */}
+                  <div className="mt-1">
+                    <button
+                      type="button"
+                      onClick={() => toggleHint(cardId)}
+                      className="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-900 bg-amber-100/70 hover:bg-amber-200/70 border border-amber-300 px-2.5 py-1 rounded-md transition-colors active:scale-95"
+                    >
+                      {isRevealed ? (
+                        <>
+                          <EyeOff className="w-3 h-3 text-amber-700" />
+                          <span>Musterantwort verbergen</span>
+                        </>
+                      ) : (
+                        <>
+                          <Eye className="w-3 h-3 text-amber-700" />
+                          <span>Musterantwort & Tipp anzeigen</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+
+                  {isRevealed && (
+                    <div className="mt-2 space-y-1.5 animate-fadeIn">
+                      <p className="text-xs text-slate-800 font-mono bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                        Musterantwort: <strong>{q.sampleAnswer}</strong>
+                      </p>
+                      <p className="text-[11px] text-amber-800 italic">💡 Hack: {q.tip}</p>
+                    </div>
+                  )}
 
                   {renderEvaluationBox(cardId, q.sampleAnswer)}
                 </div>
@@ -663,7 +777,7 @@ export function SprechenSection({
             Um Informationen bitten und Informationen geben (5 Punkte)
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-            Sie ziehen eine Karte mit einem Thema und einem Wort. Formulieren Sie die Frage mit &ldquo;Sie&rdquo;!
+            Sie ziehen eine Karte mit einem Thema und einem Wort. Bilden Sie eine Frage mit &ldquo;Sie&rdquo;!
           </p>
         </div>
 
@@ -671,6 +785,7 @@ export function SprechenSection({
           {teil2Cards.map((card) => {
             const isPlaying = activeSpeechIndex === card.id;
             const isRecording = activeRecordingId === card.id;
+            const isRevealed = isHintRevealed(card.id);
 
             return (
               <div
@@ -678,30 +793,57 @@ export function SprechenSection({
                 className="border-2 border-slate-200 rounded-xl p-4 bg-slate-50 hover:border-slate-300 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-bold text-slate-500 uppercase">
-                      Thema: <strong className="text-emerald-700">{card.topic}</strong>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-bold text-slate-600 uppercase">
+                      Thema: <strong className="text-emerald-700 text-sm ml-1">{card.topic}</strong>
                     </span>
-                    <span className="bg-[#007346] text-white text-xs font-bold px-2 py-0.5 rounded">
+                    <span className="bg-[#007346] text-white text-xs font-black px-2.5 py-1 rounded-md shadow-2xs">
                       Wort: {card.keyword}
                     </span>
                   </div>
 
-                  <div className="space-y-2 mb-3 bg-white p-3 rounded-lg border border-slate-200">
-                    <div>
-                      <span className="text-[11px] font-bold text-slate-500 block">Musterfrage:</span>
-                      <p className="text-sm font-bold text-slate-900">&ldquo;{card.sampleQuestion}&rdquo;</p>
+                  {/* Toggle button to open/close sample question & answer */}
+                  <button
+                    type="button"
+                    onClick={() => toggleHint(card.id)}
+                    className="w-full mb-3 flex items-center justify-center gap-1.5 text-xs font-bold py-2 px-3 rounded-lg border transition-all active:scale-98 shadow-2xs bg-white hover:bg-slate-50 text-slate-700 border-slate-200"
+                  >
+                    {isRevealed ? (
+                      <>
+                        <EyeOff className="w-3.5 h-3.5 text-slate-500" />
+                        <span>Musterfrage & Antwort schließen</span>
+                      </>
+                    ) : (
+                      <>
+                        <Eye className="w-3.5 h-3.5 text-[#007346]" />
+                        <span>Musterfrage & Antwort anzeigen</span>
+                      </>
+                    )}
+                  </button>
+
+                  {/* Sample Answer Box (Revealed upon click) */}
+                  {isRevealed && (
+                    <div className="space-y-2 mb-3 bg-white p-3.5 rounded-lg border border-slate-200 animate-fadeIn">
+                      <div>
+                        <span className="text-[11px] font-bold text-slate-500 block mb-0.5">Musterfrage:</span>
+                        <p className="text-sm font-bold text-slate-900">&ldquo;{card.sampleQuestion}&rdquo;</p>
+                      </div>
+                      <div>
+                        <span className="text-[11px] font-bold text-slate-500 block mb-0.5">Musterantwort:</span>
+                        <p className="text-xs text-slate-700">&ldquo;{card.sampleAnswer}&rdquo;</p>
+                      </div>
+                      <p className="text-[11px] text-amber-800 italic pt-1 border-t border-slate-100">
+                        💡 {card.hackTip}
+                      </p>
                     </div>
-                    <div>
-                      <span className="text-[11px] font-bold text-slate-500 block">Musterantwort:</span>
-                      <p className="text-xs text-slate-700">&ldquo;{card.sampleAnswer}&rdquo;</p>
-                    </div>
-                  </div>
+                  )}
                 </div>
 
                 <div>
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600 mb-1">
-                    <span className="italic">💡 {card.hackTip}</span>
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600 mb-1 pt-2 border-t border-slate-200/60">
+                    <span className="text-[11px] font-medium text-slate-500">
+                      {isRevealed ? 'Musterlösung offen' : 'Prüfungsmodus (Antwort verborgen)'}
+                    </span>
                     <div className="flex items-center gap-1.5">
                       <button
                         type="button"
@@ -755,6 +897,7 @@ export function SprechenSection({
           {teil3Cards.map((card) => {
             const isPlaying = activeSpeechIndex === card.id;
             const isRecording = activeRecordingId === card.id;
+            const isRevealed = isHintRevealed(card.id);
 
             return (
               <div
@@ -762,27 +905,57 @@ export function SprechenSection({
                 className="border-2 border-slate-200 rounded-xl p-4 bg-slate-50 hover:border-slate-300 transition-all flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-amber-600 text-white text-xs font-bold px-2 py-0.5 rounded">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="bg-amber-600 text-white text-xs font-black px-2.5 py-1 rounded-md shadow-2xs">
                       Gegenstand: {card.keyword}
+                    </span>
+                    <span className="text-xs text-slate-500 font-medium italic">
+                      Höfliche Bitte formulieren
                     </span>
                   </div>
 
-                  <div className="space-y-2 mb-3 bg-white p-3 rounded-lg border border-slate-200">
-                    <div>
-                      <span className="text-[11px] font-bold text-slate-500 block">Höfliche Bitte:</span>
-                      <p className="text-sm font-bold text-slate-900">&ldquo;{card.sampleQuestion}&rdquo;</p>
+                  {/* Toggle button to open/close sample request & reaction */}
+                  <button
+                    type="button"
+                    onClick={() => toggleHint(card.id)}
+                    className="w-full mb-3 flex items-center justify-center gap-1.5 text-xs font-bold py-2 px-3 rounded-lg border transition-all active:scale-98 shadow-2xs bg-white hover:bg-slate-50 text-slate-700 border-slate-200"
+                  >
+                    {isRevealed ? (
+                      <>
+                        <EyeOff className="w-3.5 h-3.5 text-slate-500" />
+                        <span>Musterbitte & Reaktion schließen</span>
+                      </>
+                    ) : (
+                      <>
+                        <Eye className="w-3.5 h-3.5 text-[#007346]" />
+                        <span>Musterbitte & Reaktion anzeigen</span>
+                      </>
+                    )}
+                  </button>
+
+                  {/* Sample Answer Box (Revealed upon click) */}
+                  {isRevealed && (
+                    <div className="space-y-2 mb-3 bg-white p-3.5 rounded-lg border border-slate-200 animate-fadeIn">
+                      <div>
+                        <span className="text-[11px] font-bold text-slate-500 block mb-0.5">Höfliche Bitte:</span>
+                        <p className="text-sm font-bold text-slate-900">&ldquo;{card.sampleQuestion}&rdquo;</p>
+                      </div>
+                      <div>
+                        <span className="text-[11px] font-bold text-slate-500 block mb-0.5">Natürliche Reaktion:</span>
+                        <p className="text-xs text-slate-700">&ldquo;{card.sampleAnswer}&rdquo;</p>
+                      </div>
+                      <p className="text-[11px] text-amber-800 italic pt-1 border-t border-slate-100">
+                        💡 {card.hackTip}
+                      </p>
                     </div>
-                    <div>
-                      <span className="text-[11px] font-bold text-slate-500 block">Natürliche Reaktion:</span>
-                      <p className="text-xs text-slate-700">&ldquo;{card.sampleAnswer}&rdquo;</p>
-                    </div>
-                  </div>
+                  )}
                 </div>
 
                 <div>
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600 mb-1">
-                    <span className="italic">💡 {card.hackTip}</span>
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600 mb-1 pt-2 border-t border-slate-200/60">
+                    <span className="text-[11px] font-medium text-slate-500">
+                      {isRevealed ? 'Musterlösung offen' : 'Prüfungsmodus (Antwort verborgen)'}
+                    </span>
                     <div className="flex items-center gap-1.5">
                       <button
                         type="button"
