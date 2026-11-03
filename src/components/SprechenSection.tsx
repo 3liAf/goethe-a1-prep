@@ -14,15 +14,15 @@ import {
 import {
   Volume2,
   Mic,
-  MicOff,
   CheckCircle2,
   Lightbulb,
   Smartphone,
   RotateCcw,
-  Sparkles,
   AlertCircle,
-  HelpCircle,
   Award,
+  Edit3,
+  ExternalLink,
+  ShieldAlert,
 } from 'lucide-react';
 
 interface SprechenSectionProps {
@@ -53,8 +53,28 @@ export function SprechenSection({
   const [isRecognitionAvailable, setIsRecognitionAvailable] = useState<boolean>(true);
   const [showPhoneTip, setShowPhoneTip] = useState<boolean>(false);
 
+  // iPhone non-HTTPS detection (Apple strictly disables mic on unencrypted HTTP)
+  const [isNonHttpsIPhone, setIsNonHttpsIPhone] = useState<boolean>(false);
+
+  // Manual text edit / adjustment mode for difficult recognition
+  const [editingCardId, setEditingCardId] = useState<string | null>(null);
+  const [editingInputText, setEditingInputText] = useState<string>('');
+
   useEffect(() => {
     setIsRecognitionAvailable(isSpeechRecognitionSupported());
+
+    if (typeof window !== 'undefined') {
+      const ua = window.navigator.userAgent.toLowerCase();
+      const isIPhone = /iphone|ipad|ipod/.test(ua);
+      const isNotHttps =
+        window.location.protocol !== 'https:' &&
+        window.location.hostname !== 'localhost' &&
+        window.location.hostname !== '127.0.0.1';
+
+      if (isIPhone && isNotHttps) {
+        setIsNonHttpsIPhone(true);
+      }
+    }
   }, []);
 
   // Cleanup on unmount
@@ -94,9 +114,9 @@ export function SprechenSection({
     stopSpeaking();
     setActiveSpeechIndex(null);
 
-    // If already recording this one, stop it
+    // If already recording this one, stop and evaluate it
     if (activeRecordingId === id) {
-      handleStopMic();
+      handleStopMic(id, targetPhrase);
       return;
     }
 
@@ -118,15 +138,18 @@ export function SprechenSection({
         setRecordingText((prev) => ({ ...prev, [id]: interim }));
       },
       onResult: (finalText) => {
-        setRecordingText((prev) => ({ ...prev, [id]: finalText }));
-        const evalResult = evaluateGermanPronunciation(finalText, targetPhrase);
-        setPronunciationMap((prev) => ({
-          ...prev,
-          [id]: { spoken: finalText, result: evalResult },
-        }));
-        // Auto mark as practiced if score >= 60
-        if (evalResult.score >= 60) {
-          setCheckedItems((prev) => ({ ...prev, [id]: true }));
+        const clean = finalText.trim();
+        setRecordingText((prev) => ({ ...prev, [id]: clean }));
+        if (clean) {
+          const evalResult = evaluateGermanPronunciation(clean, targetPhrase);
+          setPronunciationMap((prev) => ({
+            ...prev,
+            [id]: { spoken: clean, result: evalResult },
+          }));
+          // Auto mark as practiced if score >= 60
+          if (evalResult.score >= 60) {
+            setCheckedItems((prev) => ({ ...prev, [id]: true }));
+          }
         }
       },
       onError: (errMessage) => {
@@ -141,12 +164,50 @@ export function SprechenSection({
     setStopRecordingCallback(() => cancel);
   };
 
-  const handleStopMic = () => {
+  // Stop microphone recording and immediately evaluate whatever was captured
+  const handleStopMic = (cardId?: string, targetPhrase?: string) => {
+    const id = cardId || activeRecordingId;
+
     if (stopRecordingCallback) {
       stopRecordingCallback();
       setStopRecordingCallback(null);
     }
+
+    if (id && targetPhrase) {
+      const raw = recordingText[id];
+      if (
+        raw &&
+        !raw.startsWith('Höre zu') &&
+        !raw.startsWith('Mikrofon') &&
+        !raw.startsWith('Keine')
+      ) {
+        const evalResult = evaluateGermanPronunciation(raw, targetPhrase);
+        setPronunciationMap((prev) => ({
+          ...prev,
+          [id]: { spoken: raw, result: evalResult },
+        }));
+        if (evalResult.score >= 60) {
+          setCheckedItems((prev) => ({ ...prev, [id]: true }));
+        }
+      }
+    }
+
     setActiveRecordingId(null);
+  };
+
+  const handleManualSubmit = (id: string, targetPhrase: string) => {
+    if (!editingInputText.trim()) return;
+    const clean = editingInputText.trim();
+    const evalResult = evaluateGermanPronunciation(clean, targetPhrase);
+    setPronunciationMap((prev) => ({
+      ...prev,
+      [id]: { spoken: clean, result: evalResult },
+    }));
+    setRecordingText((prev) => ({ ...prev, [id]: clean }));
+    setEditingCardId(null);
+    if (evalResult.score >= 60) {
+      setCheckedItems((prev) => ({ ...prev, [id]: true }));
+    }
   };
 
   const toggleCheck = (id: string) => {
@@ -181,48 +242,90 @@ export function SprechenSection({
     const isRecording = activeRecordingId === id;
     const currentLiveText = recordingText[id];
     const errorMsg = micErrors[id];
+    const isEditing = editingCardId === id;
 
-    if (!data && !isRecording && !errorMsg) return null;
+    if (!data && !isRecording && !errorMsg && !isEditing) return null;
 
     return (
       <div className="mt-3 pt-3 border-t border-slate-200 text-xs sm:text-sm animate-fadeIn">
         {/* Live Recording Indicator */}
         {isRecording && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-3 flex items-center justify-between gap-2 mb-2">
+          <div className="bg-red-50 border border-red-200 rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-2">
             <div className="flex items-center gap-2">
-              <span className="relative flex h-3 w-3">
+              <span className="relative flex h-3 w-3 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
               </span>
               <span className="font-bold text-red-900 text-xs sm:text-sm">
-                {currentLiveText || 'Höre zu... Sprich jetzt!'}
+                {currentLiveText || 'Höre zu... Sprich jetzt deutlich auf Deutsch!'}
               </span>
             </div>
             <button
               type="button"
-              onClick={handleStopMic}
-              className="px-3 py-1 bg-red-600 text-white text-xs font-bold rounded-lg shadow-xs active:scale-95"
+              onClick={() => handleStopMic(id, targetPhrase)}
+              className="self-end sm:self-center px-4 py-1.5 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-lg shadow-xs active:scale-95 transition-transform"
             >
-              Stopp
+              Stopp & Auswerten
             </button>
           </div>
         )}
 
-        {/* Error message */}
+        {/* Error message with retry */}
         {errorMsg && !isRecording && (
-          <div className="bg-amber-50 border border-amber-200 rounded-xl p-2.5 flex items-center gap-2 text-xs text-amber-900 mb-2">
-            <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
-            <span>{errorMsg}</span>
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-amber-900 mb-2">
+            <div className="flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
+              <span>{errorMsg}</span>
+            </div>
+            <button
+              type="button"
+              onClick={() => handleStartMic(id, targetPhrase)}
+              className="self-end sm:self-center flex items-center gap-1 font-bold text-amber-900 bg-amber-200/80 px-2.5 py-1 rounded-md hover:bg-amber-300"
+            >
+              <RotateCcw className="w-3 h-3" /> Nochmal
+            </button>
+          </div>
+        )}
+
+        {/* Manual text editing option */}
+        {isEditing && (
+          <div className="bg-slate-50 border border-slate-300 rounded-xl p-3 mb-2 space-y-2">
+            <span className="font-bold text-slate-800 text-xs block">
+              Satz manuell eingeben oder anpassen:
+            </span>
+            <input
+              type="text"
+              value={editingInputText}
+              onChange={(e) => setEditingInputText(e.target.value)}
+              placeholder="z. B. Ich heiße Alex..."
+              className="w-full text-xs p-2.5 rounded-lg border border-slate-300 bg-white focus:ring-2 focus:ring-[#007346] outline-hidden"
+            />
+            <div className="flex justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setEditingCardId(null)}
+                className="text-xs text-slate-500 hover:text-slate-800 px-2 py-1"
+              >
+                Abbrechen
+              </button>
+              <button
+                type="button"
+                onClick={() => handleManualSubmit(id, targetPhrase)}
+                className="text-xs font-bold text-white bg-[#007346] hover:bg-emerald-800 px-3 py-1 rounded-md"
+              >
+                Auswerten
+              </button>
+            </div>
           </div>
         )}
 
         {/* Evaluation Output */}
         {data && !isRecording && (
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2.5">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-1.5">
                 <Award className="w-4 h-4 text-[#007346]" />
-                <span className="font-bold text-slate-800">Aussprache-Check:</span>
+                <span className="font-bold text-slate-800">Aussprache-Ergebnis:</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span
@@ -262,6 +365,27 @@ export function SprechenSection({
             <p className="text-xs text-slate-700 leading-relaxed font-medium">
               {data.result.feedbackDe}
             </p>
+
+            <div className="flex items-center justify-between pt-1 border-t border-slate-200 text-[11px] text-slate-500">
+              <button
+                type="button"
+                onClick={() => {
+                  setEditingCardId(id);
+                  setEditingInputText(data.spoken);
+                }}
+                className="hover:text-emerald-700 flex items-center gap-1 font-semibold"
+              >
+                <Edit3 className="w-3 h-3" /> Text korrigieren
+              </button>
+
+              <button
+                type="button"
+                onClick={() => handleStartMic(id, targetPhrase)}
+                className="hover:text-emerald-700 flex items-center gap-1 font-semibold text-emerald-800"
+              >
+                <RotateCcw className="w-3 h-3" /> Nochmal sprechen
+              </button>
+            </div>
           </div>
         )}
       </div>
@@ -270,6 +394,32 @@ export function SprechenSection({
 
   return (
     <div className="space-y-6 sm:space-y-8">
+      {/* Non-HTTPS iPhone Warning Banner */}
+      {isNonHttpsIPhone && (
+        <div className="bg-amber-500/15 border-2 border-amber-500 rounded-xl p-4 text-xs text-amber-950 animate-fadeIn flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex items-start gap-2.5">
+            <ShieldAlert className="w-5 h-5 text-amber-700 shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-sm text-amber-900 mb-0.5">
+                iPhone-Sicherheitshinweis für das Mikrofon
+              </p>
+              <p className="text-amber-800 leading-relaxed">
+                Apple Safari blockiert das Mikrofon auf unverschlüsselten HTTP-Seiten. Bitte öffne die Goethe A1 Prüfung über die offizielle HTTPS-Adresse, damit die Spracherkennung sofort funktioniert:
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://searches-managers-kurt-muze.trycloudflare.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="self-start sm:self-center bg-[#007346] hover:bg-emerald-800 text-white font-bold px-3.5 py-2 rounded-lg text-xs flex items-center gap-1.5 shadow-xs shrink-0"
+          >
+            <span>Zu HTTPS wechseln</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
+      )}
+
       {/* Module Overview Banner */}
       <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-xs">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-2">
@@ -288,7 +438,7 @@ export function SprechenSection({
             className="self-start sm:self-center flex items-center gap-1.5 text-xs text-[#007346] bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-3 py-2 rounded-lg font-bold transition-colors"
           >
             <Smartphone className="w-4 h-4" />
-            <span>Smartphone Sprech-Tipp</span>
+            <span>iPhone & Smartphone Tipps</span>
           </button>
         </div>
 
@@ -310,7 +460,7 @@ export function SprechenSection({
 
           <div className="flex items-center gap-1.5 text-slate-500">
             <Mic className="w-3.5 h-3.5 text-emerald-600" />
-            <span>{isRecognitionAvailable ? 'Mikrofon verfügbar' : 'Aussprache-Audio verfügbar'}</span>
+            <span>{isRecognitionAvailable ? 'Mikrofon aktiv' : 'Audio-Modus aktiv'}</span>
           </div>
         </div>
 
@@ -319,20 +469,20 @@ export function SprechenSection({
           <div className="mt-3 p-3.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-900 animate-fadeIn">
             <div className="flex items-center gap-2 font-bold mb-1">
               <Smartphone className="w-4 h-4 text-blue-600" />
-              <span>📱 So übst du Sprechen optimal auf dem Smartphone:</span>
+              <span>📱 So übst du Sprechen optimal auf dem iPhone & Smartphone:</span>
             </div>
             <ul className="list-disc list-inside space-y-1 text-blue-800 leading-relaxed">
               <li>
                 <strong>1. Anhören:</strong> Tippe auf das Lautsprecher-Symbol (<Volume2 className="w-3 h-3 inline" />), um die native deutsche Aussprache zu hören.
               </li>
               <li>
-                <strong>2. Nachsprechen mit Mikrofon:</strong> Tippe auf das Mikrofon (<Mic className="w-3 h-3 inline" />). Sprich den deutschen Satz laut und deutlich ins Smartphone-Mikrofon.
+                <strong>2. Nachsprechen mit Mikrofon:</strong> Tippe auf das Mikrofon (<Mic className="w-3 h-3 inline" />). Sprich den Satz auf Deutsch. Sobald du pausierst oder auf <em>&ldquo;Stopp & Auswerten&rdquo;</em> tippst, erscheint deine Auswertung!
               </li>
               <li>
                 <strong>3. Sofortige KI-Analyse:</strong> Die App vergleicht deine Wörter, erkennt Fehler und gibt dir eine Punktzahl sowie wertvolle Tipps für die Goethe-Prüfer!
               </li>
               <li>
-                <strong>Mikrofon-Berechtigung:</strong> Bitte erlaube dem Browser (Safari auf iPhone oder Chrome auf Android) den Mikrofonzugriff, wenn eine Abfrage erscheint.
+                <strong>iPhone-Berechtigung:</strong> Bitte erlaube Safari den Mikrofon-Zugriff (&ldquo;Erlauben&rdquo; antippen).
               </li>
             </ul>
           </div>

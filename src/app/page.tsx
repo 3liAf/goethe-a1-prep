@@ -6,6 +6,7 @@ import { ModuleType, ExamAttemptRecord } from '@/types/exam';
 import { calculateExamScore, EvaluationResult } from '@/lib/scoring';
 import { saveExamAttempt } from '@/lib/db';
 import { HeaderNav } from '@/components/HeaderNav';
+import { PWAInstallBanner } from '@/components/PWAInstallBanner';
 import { HoerenSection } from '@/components/HoerenSection';
 import { LesenSection } from '@/components/LesenSection';
 import { SchreibenSection } from '@/components/SchreibenSection';
@@ -131,6 +132,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col font-sans text-slate-900">
+      {/* PWA Install Banner for iPhone & Mobile */}
+      <PWAInstallBanner />
+
       {/* Header Navigation with Goethe Styling */}
       <HeaderNav
         currentModule={currentModule}

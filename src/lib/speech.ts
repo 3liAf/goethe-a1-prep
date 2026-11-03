@@ -290,31 +290,61 @@ export function startGermanSpeechRecognition(options: SpeechRecognitionOptions):
     recognition.maxAlternatives = 3;
 
     let hasEnded = false;
-    let finalAccumulatedText = '';
+    let latestCapturedText = '';
+    let hasDeliveredResult = false;
 
     recognition.onstart = () => {
+      hasDeliveredResult = false;
+      latestCapturedText = '';
       if (options.onStart) options.onStart();
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     recognition.onresult = (event: any) => {
+      let fullTranscript = '';
       let interim = '';
-      for (let i = event.resultIndex; i < event.results.length; ++i) {
+
+      for (let i = 0; i < event.results.length; ++i) {
         const item = event.results[i];
         const transcript = item[0]?.transcript || '';
-        if (item.isFinal) {
-          finalAccumulatedText += ' ' + transcript;
-        } else {
+        if (transcript) {
+          fullTranscript += (fullTranscript ? ' ' : '') + transcript;
+        }
+        if (!item.isFinal) {
           interim += transcript;
         }
       }
 
-      finalAccumulatedText = finalAccumulatedText.trim();
-      if (interim && options.onInterim) {
-        options.onInterim(interim.trim());
+      fullTranscript = fullTranscript.trim();
+      if (fullTranscript) {
+        latestCapturedText = fullTranscript;
+        // Broadcast interim live to UI immediately
+        if (options.onInterim) {
+          options.onInterim(fullTranscript);
+        }
       }
-      if (finalAccumulatedText && options.onResult) {
-        options.onResult(finalAccumulatedText);
+    };
+
+    const flushAndFinish = () => {
+      if (hasEnded) return;
+      hasEnded = true;
+
+      const cleaned = latestCapturedText.trim();
+      if (cleaned) {
+        if (!hasDeliveredResult && options.onResult) {
+          hasDeliveredResult = true;
+          options.onResult(cleaned);
+        }
+      } else {
+        if (options.onError) {
+          options.onError(
+            'Keine deutliche Sprache erfasst. Halte das Smartphone näher an den Mund und sprich den Satz auf Deutsch.'
+          );
+        }
+      }
+
+      if (options.onEnd) {
+        options.onEnd();
       }
     };
 
@@ -323,7 +353,8 @@ export function startGermanSpeechRecognition(options: SpeechRecognitionOptions):
       const err = event.error;
       let msg = 'Fehler bei der Spracherkennung.';
       if (err === 'not-allowed') {
-        msg = 'Mikrofon-Zugriff verweigert. Bitte erlaube das Mikrofon in deinen Browser-Einstellungen.';
+        msg =
+          'Mikrofon-Zugriff verweigert. Bitte erlaube den Mikrofon-Zugriff in den iOS Einstellungen -> Safari -> Mikrofon.';
       } else if (err === 'no-speech') {
         msg = 'Keine Sprache erkannt. Bitte sprich lauter und deutlicher ins Mikrofon.';
       } else if (err === 'network') {
@@ -331,14 +362,18 @@ export function startGermanSpeechRecognition(options: SpeechRecognitionOptions):
       } else if (err === 'audio-capture') {
         msg = 'Kein Mikrofon gefunden. Bitte schließe ein Mikrofon an.';
       }
-      if (options.onError) options.onError(msg);
+
+      // If we already captured some text before the error event, keep and deliver it!
+      if (latestCapturedText.trim() && !hasDeliveredResult && options.onResult) {
+        hasDeliveredResult = true;
+        options.onResult(latestCapturedText.trim());
+      } else if (options.onError) {
+        options.onError(msg);
+      }
     };
 
     recognition.onend = () => {
-      if (!hasEnded) {
-        hasEnded = true;
-        if (options.onEnd) options.onEnd();
-      }
+      flushAndFinish();
     };
 
     recognition.start();
@@ -346,13 +381,11 @@ export function startGermanSpeechRecognition(options: SpeechRecognitionOptions):
     // Return abort/stop callback
     return () => {
       try {
-        if (!hasEnded) {
-          hasEnded = true;
-          recognition.stop();
-        }
+        recognition.stop();
       } catch {
         // ignore already stopped
       }
+      flushAndFinish();
     };
   } catch (err) {
     if (options.onError) {
