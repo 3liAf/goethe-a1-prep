@@ -1,0 +1,33 @@
+{
+  "name": "Goethe-Zertifikat A1 Simulator & Diagnose-DB",
+  "short_name": "Goethe A1",
+  "description": "Offizielle Start Deutsch 1 Prüfungssimulation mit 15 Modellsätzen, Fehler-Analyse und Sprach-Training",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#007346",
+  "theme_color": "#007346",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
