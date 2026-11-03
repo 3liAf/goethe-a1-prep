@@ -2,8 +2,20 @@
 
 import React, { useState } from 'react';
 import { HoerenQuestion } from '@/types/exam';
-import { speakGermanText, stopSpeaking, isSpeaking } from '@/lib/speech';
-import { Play, Square, Volume2, HelpCircle, AlertTriangle, Eye, EyeOff, Lightbulb, CheckCircle2, XCircle } from 'lucide-react';
+import { speakGermanText, stopSpeaking, unlockAudioAndSpeech } from '@/lib/speech';
+import {
+  Play,
+  Square,
+  Volume2,
+  AlertTriangle,
+  Eye,
+  EyeOff,
+  Lightbulb,
+  CheckCircle2,
+  XCircle,
+  Smartphone,
+  Info,
+} from 'lucide-react';
 import { MISTAKE_CATEGORIES } from '@/data/hacks-and-tips';
 
 interface HoerenSectionProps {
@@ -24,8 +36,12 @@ export function HoerenSection({
   const [activePlayingId, setActivePlayingId] = useState<string | null>(null);
   const [revealedTranscripts, setRevealedTranscripts] = useState<Record<string, boolean>>({});
   const [revealedSolutions, setRevealedSolutions] = useState<Record<string, boolean>>({});
+  const [showMobileAudioTip, setShowMobileAudioTip] = useState(false);
 
   const handlePlayAudio = (q: HoerenQuestion) => {
+    // Unlock iOS Safari / Mobile audio immediately in synchronous user tap event
+    unlockAudioAndSpeech();
+
     const currentPlays = playCounts[q.id] || 0;
     if (currentPlays >= q.playLimit && !showExplanations) {
       alert(`Prüfungsregel: In Teil ${q.teil} darf dieses Audio maximal ${q.playLimit}x abgespielt werden!`);
@@ -88,7 +104,7 @@ export function HoerenSection({
       <div
         key={q.id}
         id={`question-${q.id}`}
-        className="bg-white rounded-xl border border-slate-200 shadow-xs p-5 transition-all hover:border-slate-300"
+        className="bg-white rounded-xl border border-slate-200 shadow-xs p-4 sm:p-5 transition-all hover:border-slate-300"
       >
         {/* Question Header */}
         <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -104,10 +120,10 @@ export function HoerenSection({
           <div className="flex items-center gap-2">
             {/* Play Limit Badge */}
             <span
-              className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${
+              className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full ${
                 q.playLimit === 1
-                  ? 'bg-amber-100 text-amber-800'
-                  : 'bg-emerald-50 text-emerald-800'
+                  ? 'bg-amber-100 text-amber-800 border border-amber-200'
+                  : 'bg-emerald-50 text-emerald-800 border border-emerald-200'
               }`}
             >
               {q.playLimit === 1 ? '1x hören (Teil 2 Regel)' : '2x hören erlaubt'}
@@ -122,24 +138,25 @@ export function HoerenSection({
         {/* Question Text */}
         <h4 className="text-base font-bold text-slate-900 mb-4">{q.question}</h4>
 
-        {/* Official Goethe Audio Player Box */}
-        <div className="bg-slate-50 border border-slate-200 rounded-lg p-3.5 mb-5 flex flex-wrap items-center justify-between gap-3">
+        {/* Official Goethe Audio Player Box - Mobile Optimized */}
+        <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 sm:p-4 mb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <button
+              type="button"
               onClick={() => handlePlayAudio(q)}
               disabled={isOverLimit && !isPlaying}
-              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-bold text-xs sm:text-sm transition-all shadow-xs ${
+              className={`min-h-[46px] min-w-[140px] flex items-center justify-center gap-2.5 px-5 py-2.5 rounded-xl font-bold text-sm transition-all shadow-xs active:scale-[0.98] ${
                 isPlaying
-                  ? 'bg-red-600 hover:bg-red-700 text-white animate-pulse'
+                  ? 'bg-red-600 hover:bg-red-700 text-white shadow-red-200 ring-2 ring-red-400 animate-pulse'
                   : isOverLimit
                   ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                  : 'bg-[#007346] hover:bg-emerald-800 text-white'
+                  : 'bg-[#007346] hover:bg-emerald-800 active:bg-emerald-900 text-white shadow-emerald-200'
               }`}
             >
               {isPlaying ? (
                 <>
                   <Square className="w-4 h-4 fill-current" />
-                  <span>Stopp</span>
+                  <span>Audio stoppen</span>
                 </>
               ) : (
                 <>
@@ -150,46 +167,52 @@ export function HoerenSection({
             </button>
 
             {isPlaying && (
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-700 animate-pulse">
-                <Volume2 className="w-4 h-4" />
-                <span>Audio läuft...</span>
+              <div className="flex items-center gap-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200">
+                <div className="flex items-end gap-0.5 h-3">
+                  <span className="w-1 bg-[#007346] rounded-full animate-bounce [animation-delay:-0.3s] h-3"></span>
+                  <span className="w-1 bg-[#007346] rounded-full animate-bounce [animation-delay:-0.15s] h-2"></span>
+                  <span className="w-1 bg-[#007346] rounded-full animate-bounce h-3.5"></span>
+                </div>
+                <span className="hidden xs:inline">Audio läuft...</span>
               </div>
             )}
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 self-end sm:self-center">
             <button
+              type="button"
               onClick={() => toggleTranscript(q.id)}
-              className="flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 bg-white border border-slate-200 px-2.5 py-1.5 rounded-md hover:bg-slate-50"
+              className="min-h-[40px] flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-slate-900 bg-white border border-slate-200 px-3 py-2 rounded-lg hover:bg-slate-50 transition-colors shadow-xs"
             >
               {isTranscriptOpen ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-              <span>{isTranscriptOpen ? 'Transkript verbergen' : 'Transkript (Text)'}</span>
+              <span>{isTranscriptOpen ? 'Transkript zu' : 'Transkript (Text)'}</span>
             </button>
 
             <button
+              type="button"
               onClick={() => toggleSolution(q.id)}
-              className="flex items-center gap-1.5 text-xs font-semibold text-amber-800 hover:text-amber-900 bg-amber-50 border border-amber-200 px-2.5 py-1.5 rounded-md hover:bg-amber-100"
+              className="min-h-[40px] flex items-center gap-1.5 text-xs font-semibold text-amber-800 hover:text-amber-900 bg-amber-50 border border-amber-200 px-3 py-2 rounded-lg hover:bg-amber-100 transition-colors shadow-xs"
             >
-              <Lightbulb className="w-3.5 h-3.5" />
-              <span>{isSolutionOpen ? 'Lösung schließen' : 'Lösung & Hack'}</span>
+              <Lightbulb className="w-3.5 h-3.5 text-amber-600" />
+              <span>{isSolutionOpen ? 'Lösung zu' : 'Lösung & Hack'}</span>
             </button>
           </div>
         </div>
 
         {/* Revealed Audio Transcript */}
         {isTranscriptOpen && (
-          <div className="bg-emerald-50/70 border border-emerald-200 rounded-lg p-3.5 mb-4 text-xs sm:text-sm text-slate-800">
-            <div className="font-bold text-emerald-900 mb-1 flex items-center gap-1.5">
-              <Volume2 className="w-4 h-4" />
-              <span>Gesprochener Originaltext (Transkript):</span>
+          <div className="bg-emerald-50/80 border border-emerald-200 rounded-xl p-3.5 sm:p-4 mb-4 text-xs sm:text-sm text-slate-800 animate-fadeIn">
+            <div className="font-bold text-emerald-900 mb-1.5 flex items-center gap-2">
+              <Volume2 className="w-4 h-4 text-emerald-700" />
+              <span>Gesprochener Originaltext (Prüfungs-Transkript):</span>
             </div>
-            <p className="italic leading-relaxed font-serif bg-white p-2.5 rounded-md border border-emerald-100">
+            <p className="italic leading-relaxed font-serif bg-white p-3 rounded-lg border border-emerald-100 text-slate-900 shadow-2xs">
               &ldquo;{q.audioScript}&rdquo;
             </p>
           </div>
         )}
 
-        {/* Options */}
+        {/* Options - Touch friendly tap targets */}
         <div className="space-y-2.5 mb-4">
           {q.options.map((opt) => {
             const isChecked = selectedAnswer.toLowerCase() === opt.id.toLowerCase();
@@ -200,13 +223,13 @@ export function HoerenSection({
             return (
               <label
                 key={opt.id}
-                className={`flex items-start gap-3 p-3.5 rounded-lg border cursor-pointer transition-all ${
+                className={`min-h-[48px] flex items-center gap-3 p-3.5 sm:p-4 rounded-xl border cursor-pointer transition-all active:scale-[0.99] ${
                   showCorrectStyle
-                    ? 'bg-emerald-50 border-emerald-500 ring-1 ring-emerald-500'
+                    ? 'bg-emerald-50 border-emerald-500 ring-2 ring-emerald-500/20'
                     : showWrongStyle
-                    ? 'bg-red-50 border-red-400'
+                    ? 'bg-red-50 border-red-400 ring-2 ring-red-400/20'
                     : isChecked
-                    ? 'bg-emerald-50/60 border-emerald-600 ring-1 ring-emerald-600'
+                    ? 'bg-emerald-50/70 border-emerald-600 ring-2 ring-emerald-600/20'
                     : 'bg-white border-slate-200 hover:bg-slate-50'
                 }`}
               >
@@ -216,24 +239,24 @@ export function HoerenSection({
                   value={opt.id}
                   checked={isChecked}
                   onChange={() => onSelectAnswer(q.id, opt.id)}
-                  className="mt-0.5 h-4 w-4 text-[#007346] focus:ring-emerald-500 border-slate-300"
+                  className="h-4 w-4 text-[#007346] focus:ring-emerald-500 border-slate-300 shrink-0"
                 />
                 <div className="flex-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-slate-900">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-sm font-medium text-slate-900 leading-snug">
                       <strong className="text-[#007346] mr-2 uppercase">
                         {opt.id === 'richtig' || opt.id === 'falsch' ? opt.id.toUpperCase() : `(${opt.id.toUpperCase()})`}
                       </strong>
                       {opt.text}
                     </span>
                     {showCorrectStyle && (
-                      <span className="flex items-center gap-1 text-xs font-bold text-emerald-700">
-                        <CheckCircle2 className="w-4 h-4" /> Richtig
+                      <span className="flex items-center gap-1 text-xs font-bold text-emerald-700 shrink-0 bg-emerald-100 px-2 py-0.5 rounded">
+                        <CheckCircle2 className="w-3.5 h-3.5" /> Richtig
                       </span>
                     )}
                     {showWrongStyle && (
-                      <span className="flex items-center gap-1 text-xs font-bold text-red-600">
-                        <XCircle className="w-4 h-4" /> Deine Wahl
+                      <span className="flex items-center gap-1 text-xs font-bold text-red-600 shrink-0 bg-red-100 px-2 py-0.5 rounded">
+                        <XCircle className="w-3.5 h-3.5" /> Deine Wahl
                       </span>
                     )}
                   </div>
@@ -245,8 +268,8 @@ export function HoerenSection({
 
         {/* Solution & Hack Tip Box */}
         {isSolutionOpen && (
-          <div className="mt-4 p-4 rounded-lg bg-amber-50/90 border border-amber-200 text-xs sm:text-sm">
-            <div className="flex items-center gap-2 font-bold text-amber-950 mb-1.5">
+          <div className="mt-4 p-4 rounded-xl bg-amber-50/90 border border-amber-200 text-xs sm:text-sm animate-fadeIn">
+            <div className="flex flex-wrap items-center gap-2 font-bold text-amber-950 mb-2">
               <Lightbulb className="w-4 h-4 text-amber-600" />
               <span>Erklärung & Goethe-A1 Hack:</span>
               <span className="text-[11px] font-normal bg-amber-200 text-amber-900 px-2 py-0.5 rounded-full ml-auto">
@@ -255,8 +278,8 @@ export function HoerenSection({
             </div>
             <p className="text-slate-800 mb-2 leading-relaxed">{q.explanationDe}</p>
             <p className="text-slate-600 mb-3 text-xs italic">{q.explanationEn}</p>
-            <div className="bg-white p-2.5 rounded-md border border-amber-200/60 flex items-start gap-2 text-amber-900 font-medium">
-              <span className="font-bold text-amber-700">💡 Hack:</span>
+            <div className="bg-white p-3 rounded-lg border border-amber-200/60 flex items-start gap-2.5 text-amber-900 font-medium">
+              <span className="font-bold text-amber-700 shrink-0">💡 Hack:</span>
               <span>{q.hackTip}</span>
             </div>
           </div>
@@ -266,13 +289,13 @@ export function HoerenSection({
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       {/* Module Overview Banner */}
-      <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs">
-        <div className="flex items-start justify-between gap-4">
+      <div className="bg-white rounded-xl border border-slate-200 p-4 sm:p-5 shadow-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h2 className="text-xl font-black text-slate-900 mb-1">Hören (Listening Comprehension)</h2>
-            <p className="text-sm text-slate-600 mb-3">
+            <p className="text-xs sm:text-sm text-slate-600 mb-3">
               Reguläre Prüfungszeit: <strong>circa 20 Minuten</strong> • 15 Aufgaben • maximal 15 Punkte (25% der Gesamtnote).
             </p>
             <div className="flex flex-wrap gap-2 text-xs">
@@ -288,7 +311,32 @@ export function HoerenSection({
               </span>
             </div>
           </div>
+
+          <button
+            type="button"
+            onClick={() => setShowMobileAudioTip(!showMobileAudioTip)}
+            className="self-start sm:self-center flex items-center gap-1.5 text-xs text-[#007346] bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 px-3 py-2 rounded-lg font-bold transition-colors"
+          >
+            <Smartphone className="w-4 h-4" />
+            <span>Smartphone Audio-Tipp</span>
+          </button>
         </div>
+
+        {/* Mobile Phone Audio Guidance */}
+        {showMobileAudioTip && (
+          <div className="mt-4 p-3.5 rounded-lg bg-blue-50 border border-blue-200 text-xs text-blue-900 animate-fadeIn">
+            <div className="flex items-center gap-2 font-bold mb-1">
+              <Info className="w-4 h-4 text-blue-600" />
+              <span>📱 Tipps für perfekten Ton auf dem Smartphone:</span>
+            </div>
+            <ul className="list-disc list-inside space-y-1 text-blue-800 leading-relaxed">
+              <li><strong>iPhone / iOS:</strong> Stelle sicher, dass der physische Stummschalter (Kippschalter links oben am iPhone) nicht auf Rot/Stumm steht.</li>
+              <li><strong>Medienlautstärke:</strong> Drehe die Lautstärke an der Seite deines Handys auf mindestens 50%.</li>
+              <li><strong>Kopfhörer:</strong> Für die beste Prüfungssimulation empfehlen wir Bluetooth- oder Kabel-Kopfhörer.</li>
+              <li><strong>Transkript:</strong> Falls du unterwegs im Zug bist oder kein Ton möglich ist, nutze einfach die Taste <em>&ldquo;Transkript (Text)&rdquo;</em>.</li>
+            </ul>
+          </div>
+        )}
       </div>
 
       {/* Teil 1 */}
@@ -299,12 +347,12 @@ export function HoerenSection({
             Was ist richtig? Kreuzen Sie die richtige Antwort an. Sie hören jeden Text <strong>zweimal</strong>.
           </p>
         </div>
-        <div className="space-y-5">{teil1Questions.map(renderQuestionCard)}</div>
+        <div className="space-y-4 sm:space-y-5">{teil1Questions.map(renderQuestionCard)}</div>
       </div>
 
       {/* Teil 2 */}
       <div>
-        <div className="mb-4 bg-amber-50/80 border border-amber-200 rounded-lg p-3">
+        <div className="mb-4 bg-amber-50/80 border border-amber-200 rounded-xl p-3.5">
           <div className="flex items-center gap-2 text-amber-900 font-bold text-sm mb-1">
             <AlertTriangle className="w-4 h-4 text-amber-600" />
             <span>Teil 2 — Aufgaben 7 bis 10 (ACHTUNG: Nur EINMAL hören!)</span>
@@ -313,7 +361,7 @@ export function HoerenSection({
             Kreuzen Sie an: <strong>Richtig</strong> oder <strong>Falsch</strong>. Sie hören jeden Text nur <strong>einmal</strong>.
           </p>
         </div>
-        <div className="space-y-5">{teil2Questions.map(renderQuestionCard)}</div>
+        <div className="space-y-4 sm:space-y-5">{teil2Questions.map(renderQuestionCard)}</div>
       </div>
 
       {/* Teil 3 */}
@@ -324,7 +372,7 @@ export function HoerenSection({
             Was ist richtig? Kreuzen Sie die richtige Antwort an. Sie hören jeden Text <strong>zweimal</strong>.
           </p>
         </div>
-        <div className="space-y-5">{teil3Questions.map(renderQuestionCard)}</div>
+        <div className="space-y-4 sm:space-y-5">{teil3Questions.map(renderQuestionCard)}</div>
       </div>
     </div>
   );
