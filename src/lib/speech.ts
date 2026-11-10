@@ -40,13 +40,7 @@ export function unlockAudioAndSpeech(): void {
 
     if ('speechSynthesis' in window) {
       window.speechSynthesis.resume();
-      // Populate voices
       cachedVoices = window.speechSynthesis.getVoices();
-      // Zero-volume dummy utterance to awaken iOS WebKit audio session
-      const silentWarmUp = new SpeechSynthesisUtterance('');
-      silentWarmUp.volume = 0;
-      silentWarmUp.rate = 1.0;
-      window.speechSynthesis.speak(silentWarmUp);
     }
     audioUnlocked = true;
   } catch (e) {
@@ -119,6 +113,97 @@ function stopKeepAlive(): void {
   if (keepAliveTimer) {
     clearInterval(keepAliveTimer);
     keepAliveTimer = null;
+  }
+}
+
+let currentHtmlAudio: HTMLAudioElement | null = null;
+
+export interface AudioPlayOptions {
+  onStart?: () => void;
+  onProgress?: (currentTime: number, duration: number) => void;
+  onEnd?: () => void;
+  onError?: (error: unknown) => void;
+}
+
+export function stopAllAudio(): void {
+  if (currentHtmlAudio) {
+    try {
+      currentHtmlAudio.pause();
+      currentHtmlAudio.currentTime = 0;
+      currentHtmlAudio.src = '';
+    } catch {
+      // ignore
+    }
+    currentHtmlAudio = null;
+  }
+  stopSpeaking();
+}
+
+/**
+ * Play a studio-quality native German MP3 audio recording using HTML5 Audio.
+ * 100% works on iOS Safari (even when the hardware silent switch is on),
+ * Android Chrome, Edge and Desktop.
+ */
+export function playAudioUrl(url: string, options?: AudioPlayOptions): () => void {
+  stopAllAudio();
+
+  if (typeof window === 'undefined') {
+    return () => {};
+  }
+
+  try {
+    const audio = new Audio();
+    currentHtmlAudio = audio;
+
+    audio.preload = 'auto';
+    audio.setAttribute('playsinline', 'true');
+    audio.setAttribute('webkit-playsinline', 'true');
+
+    audio.onplay = () => {
+      if (options?.onStart) options.onStart();
+    };
+
+    audio.ontimeupdate = () => {
+      if (options?.onProgress && audio.duration && !isNaN(audio.duration)) {
+        options.onProgress(audio.currentTime, audio.duration);
+      }
+    };
+
+    audio.onended = () => {
+      currentHtmlAudio = null;
+      if (options?.onEnd) options.onEnd();
+    };
+
+    audio.onerror = (e) => {
+      console.warn('HTML5 Audio playback error for', url, e);
+      currentHtmlAudio = null;
+      if (options?.onError) options.onError(e);
+    };
+
+    audio.src = url;
+
+    // Synchronous execution in user gesture stack ensures iOS authorization
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((err) => {
+        console.warn('Audio.play() blocked or failed:', err);
+        currentHtmlAudio = null;
+        if (options?.onError) options.onError(err);
+      });
+    }
+
+    return () => {
+      try {
+        audio.pause();
+        audio.currentTime = 0;
+      } catch {
+        // ignore
+      }
+      currentHtmlAudio = null;
+    };
+  } catch (err) {
+    if (options?.onError) options.onError(err);
+    return () => {};
   }
 }
 

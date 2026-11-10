@@ -174,6 +174,7 @@ export default function Home() {
         {/* Current Module Content */}
         {currentModule === 'hoeren' && (
           <HoerenSection
+            examId={activeExam.id}
             questions={activeExam.hoeren.questions}
             answers={answers}
             onSelectAnswer={handleSelectAnswer}

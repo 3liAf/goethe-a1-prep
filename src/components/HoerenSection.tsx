@@ -2,7 +2,13 @@
 
 import React, { useState } from 'react';
 import { HoerenQuestion } from '@/types/exam';
-import { speakGermanText, stopSpeaking, unlockAudioAndSpeech } from '@/lib/speech';
+import {
+  playAudioUrl,
+  stopAllAudio,
+  speakGermanText,
+  stopSpeaking,
+  unlockAudioAndSpeech,
+} from '@/lib/speech';
 import {
   Play,
   Square,
@@ -15,14 +21,23 @@ import {
   XCircle,
   Smartphone,
   Info,
+  Headphones,
 } from 'lucide-react';
 import { MISTAKE_CATEGORIES } from '@/data/hacks-and-tips';
+
+function formatSeconds(sec: number): string {
+  if (!sec || isNaN(sec) || sec <= 0) return '0:00';
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return `${m}:${s < 10 ? '0' : ''}${s}`;
+}
 
 interface HoerenSectionProps {
   questions: HoerenQuestion[];
   answers: Record<string, string>;
   onSelectAnswer: (questionId: string, answerId: string) => void;
   showExplanations?: boolean;
+  examId?: string;
 }
 
 export function HoerenSection({
@@ -30,13 +45,29 @@ export function HoerenSection({
   answers,
   onSelectAnswer,
   showExplanations = false,
+  examId,
 }: HoerenSectionProps) {
   // Play count tracker per question
   const [playCounts, setPlayCounts] = useState<Record<string, number>>({});
   const [activePlayingId, setActivePlayingId] = useState<string | null>(null);
+  const [audioProgress, setAudioProgress] = useState<Record<string, { current: number; duration: number }>>({});
+  const [audioStopFn, setAudioStopFn] = useState<(() => void) | null>(null);
   const [revealedTranscripts, setRevealedTranscripts] = useState<Record<string, boolean>>({});
   const [revealedSolutions, setRevealedSolutions] = useState<Record<string, boolean>>({});
   const [showMobileAudioTip, setShowMobileAudioTip] = useState(false);
+
+  const handleStopAudio = () => {
+    stopAllAudio();
+    if (audioStopFn) {
+      try {
+        audioStopFn();
+      } catch {
+        // ignore
+      }
+    }
+    setAudioStopFn(null);
+    setActivePlayingId(null);
+  };
 
   const handlePlayAudio = (q: HoerenQuestion) => {
     // Unlock iOS Safari / Mobile audio immediately in synchronous user tap event
@@ -49,10 +80,12 @@ export function HoerenSection({
     }
 
     if (activePlayingId === q.id) {
-      stopSpeaking();
-      setActivePlayingId(null);
+      handleStopAudio();
       return;
     }
+
+    // Stop any currently playing audio
+    handleStopAudio();
 
     setPlayCounts((prev) => ({
       ...prev,
@@ -60,15 +93,38 @@ export function HoerenSection({
     }));
     setActivePlayingId(q.id);
 
-    speakGermanText(q.audioScript, {
-      onEnd: () => setActivePlayingId(null),
-      onError: () => setActivePlayingId(null),
-    });
-  };
+    // Derive folder name: either passed examId or derived from question id (e.g. m1-h-t1-q1 -> modellsatz-1)
+    const derivedExamId = examId || q.id.split('-')[0].replace('m', 'modellsatz-');
+    const audioUrl = `/audio/${derivedExamId}/${q.id}.mp3`;
 
-  const handleStopAudio = () => {
-    stopSpeaking();
-    setActivePlayingId(null);
+    const stopFn = playAudioUrl(audioUrl, {
+      onProgress: (current, duration) => {
+        setAudioProgress((prev) => ({
+          ...prev,
+          [q.id]: { current, duration },
+        }));
+      },
+      onEnd: () => {
+        setActivePlayingId(null);
+        setAudioStopFn(null);
+      },
+      onError: (err) => {
+        console.warn('HTML5 MP3 audio failed, falling back to Web Speech API:', err);
+        // Fallback to speech synthesis if MP3 fails to load
+        speakGermanText(q.audioScript, {
+          onEnd: () => {
+            setActivePlayingId(null);
+            setAudioStopFn(null);
+          },
+          onError: () => {
+            setActivePlayingId(null);
+            setAudioStopFn(null);
+          },
+        });
+      },
+    });
+
+    setAudioStopFn(() => stopFn);
   };
 
   const toggleTranscript = (id: string) => {
@@ -167,13 +223,18 @@ export function HoerenSection({
             </button>
 
             {isPlaying && (
-              <div className="flex items-center gap-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200">
+              <div className="flex items-center gap-2 text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-200">
                 <div className="flex items-end gap-0.5 h-3">
                   <span className="w-1 bg-[#007346] rounded-full animate-bounce [animation-delay:-0.3s] h-3"></span>
                   <span className="w-1 bg-[#007346] rounded-full animate-bounce [animation-delay:-0.15s] h-2"></span>
                   <span className="w-1 bg-[#007346] rounded-full animate-bounce h-3.5"></span>
                 </div>
-                <span className="hidden xs:inline">Audio läuft...</span>
+                <span className="tabular-nums font-mono">
+                  {formatSeconds(audioProgress[q.id]?.current || 0)} / {formatSeconds(audioProgress[q.id]?.duration || 0)}
+                </span>
+                <span className="text-[10px] uppercase tracking-wide bg-emerald-200/60 text-emerald-900 px-1.5 py-0.5 rounded font-semibold hidden sm:inline">
+                  Studio MP3
+                </span>
               </div>
             )}
           </div>
@@ -324,16 +385,16 @@ export function HoerenSection({
 
         {/* Mobile Phone Audio Guidance */}
         {showMobileAudioTip && (
-          <div className="mt-4 p-3.5 rounded-lg bg-blue-50 border border-blue-200 text-xs text-blue-900 animate-fadeIn">
-            <div className="flex items-center gap-2 font-bold mb-1">
-              <Info className="w-4 h-4 text-blue-600" />
-              <span>📱 Tipps für perfekten Ton auf dem Smartphone:</span>
+          <div className="mt-4 p-3.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs text-emerald-950 animate-fadeIn">
+            <div className="flex items-center gap-2 font-bold mb-1.5 text-emerald-900">
+              <Headphones className="w-4 h-4 text-[#007346]" />
+              <span>📱 Echte Studio-MP3 Aufnahmen (optimiert für iPhone & Android):</span>
             </div>
-            <ul className="list-disc list-inside space-y-1 text-blue-800 leading-relaxed">
-              <li><strong>iPhone / iOS:</strong> Stelle sicher, dass der physische Stummschalter (Kippschalter links oben am iPhone) nicht auf Rot/Stumm steht.</li>
-              <li><strong>Medienlautstärke:</strong> Drehe die Lautstärke an der Seite deines Handys auf mindestens 50%.</li>
-              <li><strong>Kopfhörer:</strong> Für die beste Prüfungssimulation empfehlen wir Bluetooth- oder Kabel-Kopfhörer.</li>
-              <li><strong>Transkript:</strong> Falls du unterwegs im Zug bist oder kein Ton möglich ist, nutze einfach die Taste <em>&ldquo;Transkript (Text)&rdquo;</em>.</li>
+            <ul className="list-disc list-inside space-y-1 text-emerald-800 leading-relaxed">
+              <li><strong>iPhone / iOS:</strong> Alle 225 Hörbeispiele sind als standardkonforme HTML5-Audiodateien eingebettet. Sie spielen auf jedem iPhone laut ab, ohne dass du extra ein deutsches Sprachpaket in iOS installieren musst!</li>
+              <li><strong>Stummschalter:</strong> Für volle Lautstärke stelle bitte sicher, dass dein iPhone nicht stummgeschaltet ist und die Lautstärke über 50% liegt.</li>
+              <li><strong>Kopfhörer:</strong> Für das beste Prüfungserlebnis empfehlen wir Kopfhörer, genau wie in der echten Prüfung.</li>
+              <li><strong>Transkript:</strong> Falls du in der U-Bahn bist und keinen Ton abspielen kannst, nutze die Taste <em>&ldquo;Transkript (Text)&rdquo;</em>.</li>
             </ul>
           </div>
         )}

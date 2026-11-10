@@ -1,0 +1,1802 @@
+[
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag, Herr Meier! Treffen wir uns heute Abend am Bahnhof? — Nein, am Bahnhof ist zu viel Lärm. Wie wäre es vor dem Kino? — Das Kino macht erst um acht auf. Lassen Sie uns doch lieber gemütlich im Café am Marktplatz treffen! — Einverstanden, um sieben im Café am Marktplatz.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Entschuldigung, was kostet dieser grüne Pullover hier? — Der hat früher 39,50 Euro gekostet. Aber heute ist Sonderangebot: Er kostet nur 19 Euro 50! — Prima, den nehme ich.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Wann fährt denn der nächste Bus nach Frankfurt? — Normalerweise um viertel nach neun, also um 9:15 Uhr. Aber heute hat der Bus 15 Minuten Verspätung. Er fährt erst um halb zehn ab! — Gut, danke.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Guten Tag! Was darf ich Ihnen bringen? Einen Kaffee? — Nein danke, Kaffee trinke ich heute nicht mehr. Haben Sie Apfelsaft? — Der ist leider ausverkauft. Wir haben frischen Orangensaft oder Mineralwasser. — Dann nehme ich ein Glas Orangensaft, bitte.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Hallo Stefan! Fährst du am Wochenende wie immer in die Berge zum Wandern? — Nein, meine Schwester hat Geburtstag. Wir wollten erst an die Ostsee, aber sie feiert jetzt in Berlin. Ich fahre also nach Berlin! — Viel Spaß!",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Guten Abend, mein Name ist Schneider. Ich habe ein Zimmer reserviert. — Einen Moment, Herr Schneider... Ah ja, hier: Sie haben Zimmer Nummer zweihundertvierundfünfzig im zweiten Stock. Hier ist Ihr Schlüssel. — Vielen Dank.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Achtung an Gleis 4: Der Intercity nach München hat einen technischen Defekt. Bitte alle Fahrgäste aussteigen und am Gleis 7 in den Ersatzzug umsteigen. Ich wiederhole: Bitte alle Fahrgäste nach München aussteigen!",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Liebe Kundinnen und Kunden! Besuchen Sie heute unsere Süßwarenabteilung im ersten Stock. Alle Tafeln Schweizer Schokolade erhalten Sie heute mit 50 Prozent Rabatt, also zum halben Preis! Greifen Sie zu!",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Letzter Aufruf für Fluggäste von Flug LH 402 nach Rom. Bitte begeben Sie sich unverzüglich zum Flugsteig B12. Das Einsteigen beginnt in wenigen Minuten.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Verehrte Kunden, wir schließen unser Haus in wenigen Augenblicken. Es ist jetzt 19 Uhr 50 und unsere Kassen schließen um 20 Uhr. Bitte zahlen Sie jetzt Ihre Einkäufe.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Herr Wagner, hier spricht die Praxis Dr. Becker. Ihr Termin am Dienstag muss leider entfallen. Können Sie stattdessen am Mittwoch um halb elf vorbeikommen? Also Mittwoch, 10 Uhr 30. Bitte rufen Sie uns zurück.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Hallo Lisa, hier ist Markus. Wegen unserer Party am Samstag: Getränke haben wir schon genug gekauft, und für Musik sorgt Jan. Aber könntest du vielleicht deinen leckeren Schokoladenkuchen backen und mitbringen? Danke dir, bis Samstag!",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Guten Tag Frau Klein, Autohaus Müller hier. Die Reparatur an Ihrem Wagen ging schneller als gedacht. Ihr Auto ist abholbereit und steht auf unserem Parkplatz. Sie können es heute bis 18 Uhr abholen.",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Hallo Sandra! Ich wollte ja eigentlich am Wochenende bei dir vorbeischauen. Aber am Samstag muss ich lange arbeiten, und am Sonntag hat mein Sohn ein Fußballspiel. Ich komme deshalb gleich am Montag nach der Arbeit. Bis dann!",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-1",
+    "questionId": "m1-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hallo Thomas, hier ist Julia. Du, mein Computer startet seit heute Morgen überhaupt nicht mehr. Der Bildschirm bleibt schwarz! Mein Handy geht zwar noch, aber ich muss dringend eine E-Mail schreiben. Kannst du heute Abend mal vorbeikommen und nach dem Rechner schauen?",
+    "outputFile": "public\\audio\\modellsatz-1\\m1-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Auskunft Hauptbahnhof, guten Tag. Fährt der Zug nach Hamburg heute von Gleis 3? — Nein, Gleis 3 wird renoviert. Ursprünglich war Gleis 18 geplant, aber der ICE fährt heute von Gleis 8 ab! — Vielen Dank, Gleis 8.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Guten Tag, einmal Berlin hin und zurück, bitte. Was kostet das? — Der Normalpreis ist 75 Euro. Mit Ihrer BahnCard erhalten Sie Rabatt und zahlen nur fünfundvierzig Euro. — Super, hier sind 45 Euro.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Hallo Sandra, weißt du, wann Dr. Vogel morgens aufmacht? Schon um halb acht? — Nein, so früh nicht. Die Praxis öffnet erst um halb neun. Um neun beginnen die Behandlungen. — Danke, dann gehe ich um 8:30 Uhr hin.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Bringst du noch Alkohol für die Party mit? Wein oder Bier? — Nein, Alkohol trinken viele der Gäste nicht. Brot und Käse hat Peter schon besorgt. Ich kaufe sechs Flaschen Mineralwasser und Orangensaft. — Gute Idee!",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Hast du meinen Hausschlüssel gesehen? In meiner Handtasche ist er nicht. — Liegt er vielleicht auf dem Küchentisch? — Nein, da habe ich gerade geschaut. Ah, hier ist er ja: Im Flur direkt neben dem Telefon! — Gott sei Dank.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Guten Tag in der Stadtbibliothek! Brauchst du das große Wörterbuch? — Nein, ein Wörterbuch habe ich zu Hause. Und für den Krimi habe ich keine Zeit. Ich suche das neue Grammatikbuch für das Niveau A1. — Das steht im Regal C3.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Achtung Fluggäste nach Zürich: Flug LX 354 kann wegen schlechten Wetters nicht pünktlich starten. Die neue Abflugzeit verschiebt sich um 30 Minuten nach hinten. Wir bitten um Ihr Verständnis.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Aufgepasst liebe Modefreunde: Heute im Winterschlussverkauf: 20 Euro Rabatt auf alle Marken-Winterjacken! Sparen Sie jetzt 20 Euro bei jedem Jackenkauf!",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Nächster Halt: Frankfurt am Main Hauptbahnhof. Ausstieg in Fahrtrichtung rechts. Sie haben Anschluss an alle S-Bahnen und den Regionalverkehr.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Wichtige Mitteilung an unsere Besucher: Wegen einer internen Mitarbeiterschulung öffnet die Stadtbibliothek morgen erst um 14:00 Uhr statt wie gewohnt um 10:00 Uhr.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Herr Bauer, Sanitärbetrieb Hoffmann hier. Wegen Ihrer Heizung: Heute schaffen wir es leider nicht mehr. Aber morgen früh um 8:00 Uhr steht unser Mitarbeiter pünktlich bei Ihnen vor der Tür. Bitte stellen Sie sicher, dass jemand zu Hause ist.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Hallo David, hier ist Herr Krause von der Hausverwaltung. Ihre bisherige Warmmiete war 680 Euro. Durch die gestiegenen Heizkosten erhöht sich die Miete ab nächsten Monat auf siebenhundertachtzig Euro. Bitte passen Sie Ihren Dauerauftrag an.",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Frau Meyer, hier ist Sabine Schulz. Ich bin heute nicht mehr im Büro am Schreibtisch. Rufen Sie mich bitte direkt auf dem Handy an unter 0171 987654. Bis später!",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Hi Schatz, ich koche heute Nudeln mit Tomatensauce. Nudeln und Tomaten habe ich schon im Schrank gefunden. Aber wir haben keine Eier und keine Milch mehr für das Dessert. Kannst du das bitte auf dem Heimweg besorgen?",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-2",
+    "questionId": "m2-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hallo Anna, ich bin schon unterwegs. Treffen wir uns an der Bushaltestelle? Nein, das ist zu voll. Komm am besten direkt zum Eingang vom Schwimmbad, ich warte dort auf der Holzbank auf dich. Bis gleich!",
+    "outputFile": "public\\audio\\modellsatz-2\\m2-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Herr Hansen, beginnt unser Meeting heute wie gewohnt um zwei? — Nein, Frau Sommer ist noch beim Kunden. Wir verschieben die Besprechung um eine halbe Stunde auf halb drei. — Gut, dann sehen wir uns um 14 Uhr 30 im Konferenzraum.",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Guten Tag Herr Walter, was fehlt Ihnen denn? Haben Sie Magenprobleme? — Nein, dem Magen geht es gut. Aber seit zwei Tagen habe ich schlimme Halsschmerzen beim Schlucken und hohes Fieber. — Machen Sie bitte den Mund weit auf...",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Guten Tag! Ich brauche ein Ticket für den gesamten Monat. Kostet das 69 Euro? — Nein, mit dem Deutschlandticket zahlen Sie bundesweit im Nahverkehr nur neunundvierzig Euro im Monat. — Prima, das nehme ich!",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Fährst du morgens mit dem Auto ins Büro? — Nein, im Zentrum gibt es keine Parkplätze. Und die Straßenbahn ist mir zu voll. Bei schönem Wetter fahre ich immer mit dem Fahrrad. Das hält fit! — Respekt!",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Fliegt ihr diesen Sommer wieder nach Spanien ans Meer? — Mein Mann wollte gern ans Meer, aber die Kinder und ich wollen wandern. Wir haben eine schöne Ferienwohnung in den Bergen in Österreich gebucht. — Wunderbar!",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Guten Tag! Ich habe zwei schwere Koffer dabei. Gehen die beide frei durch? — Leider nein. In Ihrem Economy-Tarif ist genau ein Koffer bis maximal 23 Kilo frei. Für den zweiten Koffer müssen Sie einen Aufpreis zahlen. — Verstehe.",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Sehr geehrte Fahrgäste, bitte beachten Sie: Einzelfahrscheine sind vor Fahrtantritt an den roten Automaten auf dem Bahnsteig zu entwerten. Im Zug ist keine Entwertung möglich!",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Achtung liebe Heimwerker: An Heiligabend schließen wir bereits um 14 Uhr. Heute am Freitag haben wir wie gewohnt bis 20 Uhr für Sie geöffnet!",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Fahrgastinformation: Wegen Straßenbauarbeiten wird die Buslinie 10 am Samstag und Sonntag über die Goethestraße umgeleitet. Alle Haltestellen werden bedient, es kann jedoch zu leichten Verzögerungen kommen.",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Gleisänderung: Der Railjet aus Wien Hauptbahnhof, geplante Ankunft 17:40 Uhr, fährt heute abweichend auf Gleis 2 ein. Ich wiederhole: Ankunft auf Gleis 2!",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Herr Becker, hier spricht die Anwaltskanzlei Weber. Die Verträge liegen unterschriftsreif vor. Wir haben am Donnerstag um halb vier einen Termin für Sie reserviert, also 15 Uhr 30. Bitte bestätigen Sie den Termin kurz telefonisch.",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Hi Martin, Tobias hier! Ich fahre heute Abend zum Vereinstraining und habe noch einen freien Platz im Auto. Ich kann dich um kurz vor sieben bei dir zu Hause abholen, dann musst du nicht den Bus nehmen. Meld dich, wenn das passt!",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Guten Tag Frau Yilmaz, Prüfungszentrum Goethe-Test hier. Zur morgigen A1-Prüfung bringen Sie bitte unbedingt Ihren gültigen Personalausweis oder Reisepass sowie die schriftliche Anmeldebestätigung mit. Wörterbücher sind streng verboten.",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Guten Tag, Immobilienbüro Fischer. Wegen Ihrer Anfrage für die 2-Zimmer-Wohnung: Unter der Woche sind die jetzigen Mieter leider nie da. Die Sammelbesichtigung findet daher am Samstagvormittag um genau 10:00 Uhr statt. Treffpunkt vor dem Hauseingang.",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-3",
+    "questionId": "m3-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hallo Herr Hoffmann, Adler-Apotheke hier. Ihre bestellten Augentropfen sind jetzt eingetroffen. Den Hustensaft hatten Sie ja gestern schon mitgenommen. Sie können die Tropfen bis 18:30 Uhr an der Kasse abholen.",
+    "outputFile": "public\\audio\\modellsatz-3\\m3-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag, Frau Weber! Kommen Sie heute auch zum Elternabend? - Ja, aber ich weiß nicht genau, wann er anfängt. War das nicht um halb sieben? - Nein, die Lehrerin hat geschrieben: Beginn ist um 19:00 Uhr, aber ab halb sieben gibt es schon Kaffee. - Ach so! Dann komme ich pünktlich um sieben.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Hallo Thomas, hast du schon ein Geschenk für Emmas Geburtstag? - Ich wollte ihr erst einen Malkasten oder ein Buch über Hunde kaufen. Aber ihre Mutter sagt, sie braucht dringend ein neues Fahrrad, weil das alte zu klein ist. - Ein Fahrrad ist toll! Da freuen sich alle Kinder.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Hallo Schatz, ich bin noch im Büro. Kannst du Lukas vom Spielplatz abholen? - Lukas ist heute gar nicht auf dem Spielplatz! Er hat doch mittwochs Basketballtraining in der Turnhalle. - Ach richtig! Hol ihn bitte von dort ab. - Geht klar, ich fahre direkt zur Turnhalle.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Herr Müller, hier ist der Zettel für den Zoobesuch der Klasse 3b. Wie viel Geld müssen wir mitbringen? - Der Eintritt kostet normalerweise 25 Euro für Familien, aber für Schüler im Klassenverband nur 12 Euro plus 3 Euro für den Bus. Also insgesamt 15 Euro pro Kind. - Alles klar, hier sind 15 Euro.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Mama, wir machen morgen ein Klassenpicknick im Schlosspark. Was soll ich mitbringen? Frau Berg sagt, Kuchen haben wir schon genug von Leonie. Und Sandwiches macht David. - Dann kaufst du am besten zwei Flaschen Apfelsaft im Supermarkt. - Super, Apfelsaft mag jeder!",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Ist Frau Klein die neue Deutschlehrerin? - Nein, für Deutsch haben wir Herrn Sommer. Frau Klein macht Mathe und am Freitag leitet sie noch den Schulchor, aber als Unterrichtsfach hat sie nur Mathematik.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Achtung liebe Badegäste im Stadtbad: Die große Wasserrutsche ist heute ab sofort für alle Kinder ab 6 Jahren freigegeben. Kinder unter 6 Jahren dürfen die Rutsche in Begleitung eines Erwachsenen ebenfalls gerne benutzen. Wir wünschen viel Spaß!",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Sehr geehrte Kundinnen und Kunden im Kaufhaus Karstadt. Der kleine Felix, 4 Jahre alt, mit blauer Jacke, sucht seine Eltern. Die Eltern möchten bitte sofort in die Spielwarenabteilung im 3. Stock kommen und ihren Sohn dort an der Kasse abholen.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Eine wichtige Durchsage des Schulamtes Hessen: Aufgrund von schwerem Schneefall und Glatteis fällt der gesamte Schulunterricht an allen Grundschulen im Kreis Darmstadt morgen, Donnerstag, aus. Eine Notbetreuung ist eingerichtet.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Liebe Anwohner und Eltern! Unser alljährlicher Kinderflohmarkt findet diesen Samstag bei schönem Wetter draußen auf dem Schulhof statt. Nur bei starkem Regen weichen wir in die Turnhalle aus. Der Wetterbericht verspricht viel Sonne!",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Hallo Frau Fischer, hier spricht Frau Bender von der Kita Sonnenschein. Ihrer Tochter Marie geht es leider nicht gut. Sie hat plötzlich hohes Fieber und klagt über Bauchschmerzen. Bitte kommen Sie so schnell wie möglich vorbei und holen Sie die Kleine ab. Danke!",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Guten Tag Julian, hier ist Herr Neumann, dein Deutschlehrer. Zur Erinnerung für die Klasse: Bitte kauft bis nächste Woche das Arbeitsbuch \"Deutsch im Alltag 1\", Verlag Cornelsen, nicht die Schritte-Reihe. Das Buch kostet 14,99 Euro. Auf Wiederhören.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Nadine, hier ist Claudia. Leon spielt gerade noch so schön mit Tim im Kinderzimmer. Wir wollten eigentlich um 15 Uhr Schluss machen, aber die beiden möchten noch einen Film gucken. Kannst du Leon erst um halb fünf abholen? Also 16:30 Uhr? Sag kurz Bescheid, danke!",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Guten Tag Familie Kaya, hier ist das Sekretariat der Jugendmusikschule. Wir haben Ihre Anmeldung für Klavierunterricht erhalten. Das Passfoto und die Geburtsurkunde liegen vor, aber auf Seite 2 fehlt noch die Unterschrift der Erziehungsberechtigten. Bitte reichen Sie diese zeitnah nach.",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-4",
+    "questionId": "m4-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hi Jan, hier ist Moritz. Für Samstagnachmittag haben wir Kinokarten für den Animationsfilm reserviert. Wir treffen uns um 14:45 Uhr direkt vor dem Eingang des Kinos \"Astor\" in der Bahnhofstraße. Nicht am Spielplatz, das wird zu knapp. Bis Samstag!",
+    "outputFile": "public\\audio\\modellsatz-4\\m4-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag, ich möchte diesen Standardbrief nach Barcelona verschicken. Was kostet das? - Innerhalb von Deutschland kostet ein Standardbrief 85 Cent. Aber nach Spanien, also ins europäische Ausland, kostet er 1 Euro 10. Als Einschreiben wären es 1,70 Euro mehr. - Nein, ganz normaler Versand reicht. Hier sind 1 Euro 10.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Guten Tag, ich habe meine EC-Karte verloren und muss dringend 200 Euro bar abheben. Welcher Schalter ist zuständig? - An Schalter 1 machen wir nur Kontoeröffnungen. Für Bargeldauszahlungen mit Personalausweis gehen Sie bitte direkt an Schalter 3. - Vielen Dank!",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Sag mal, weißt du, wie lange die Post heute aufhat? - Normalerweise donnerstags bis 19 Uhr. Aber heute ist doch Mittwoch! Mittwochs schließen sie schon um 18 Uhr. Letzten Samstag war sogar um 16 Uhr Schluss. - Oh, dann müssen wir uns beeilen!",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Das macht zusammen 43,80 Euro. Zahlen Sie bar oder mit Karte? - Nehmen Sie auch Kreditkarten? - Leider nein, nur EC-Karte oder bar. - Gut, dann zahle ich mit meiner EC-Karte. Hier, bitte schön. - Bitte die PIN eingeben.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Entschuldigung, wo ist hier die DHL-Packstation? Ich dachte, sie steht bei der Sparkasse gegenüber dem Rathaus. - Nein, die wurde letztes Jahr abgebaut. Die neue steht direkt hinter dem großen REWE-Supermarkt auf dem Parkplatz. - Alles klar, danke für die Auskunft!",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Guten Tag vom Kundenservice. Ihre Sendung wurde heute, Donnerstag, verpackt. Unser Paketbote stellt die Ware voraussichtlich morgen am Freitag zwischen 10 und 13 Uhr zu. Sollten Sie nicht da sein, lagern wir es bis Samstag in der Filiale. - Perfekt, am Freitag bin ich zu Hause.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Sehr geehrte Kundinnen und Kunden der Stadtsparkasse: Wegen technischer Wartungsarbeiten ist der Geldautomat im Foyer heute bis 14 Uhr außer Betrieb. Bitte nutzen Sie die beiden Automaten in unserem Kundenraum im ersten Stock. Vielen Dank.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Liebe Kundinnen und Kunden: Unsere Postagentur schließt heute aus betrieblichen Gründen bereits um 17:30 Uhr. Nicht abgeholte Pakete können Sie morgen ab 8:30 Uhr wie gewohnt in Empfang nehmen.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Achtung wichtige Kundeninformation der Volksbank: Für persönliche Finanz- und Kreditberatungen bitten wir Sie, vorab online oder telefonisch einen festen Termin zu vereinbaren. Ohne Termin können wir leider keine ausführliche Beratung anbieten.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Hinweis der Deutschen Post: Bitte werfen Sie Einschreiben und Pakete niemals in den gelben Briefkasten! Geben Sie diese Sendungen ausschließlich persönlich an unserem Schalter ab, um einen Einlieferungsbeleg zu erhalten.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Herr Demir, hier ist Richter von der Commerzbank Filiale Hauptbahnhof. Ich rufe an, weil Ihre neue girocard eingetroffen ist. Sie können Ihre Karte ab morgen während unserer Öffnungszeiten am Informationsschalter mit Ihrem Ausweis abholen. Auf Wiederhören.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Automatische Benachrichtigung der Postfiliale: Ihre Sendung mit der Nummer 84920 wurde heute am 5. November angeliefert. Wir lagern das Paket 7 Werktage für Sie. Bitte holen Sie es bis spätestens Dienstag, den 12. November, ab, sonst geht es an den Absender zurück.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Herr Demir, hier spricht Ihr Vermieter Krause. Sie haben mir für die Kaution bisher 350 Euro überwiesen. Vereinbart waren im Mietvertrag aber 500 Euro. Es fehlen also noch genau 150 Euro. Bitte überweisen Sie den Restbetrag von 150 Euro bis Ende des Monats. Danke!",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Hallo Herr Demir, hier noch einmal die Bank. Für Ihren Termin zur Kontoeröffnung am Donnerstag um 10 Uhr denken Sie bitte unbedingt an Ihren gültigen Reisepass sowie die letzte Gehaltsabrechnung Ihres Arbeitgebers. Den Mietvertrag brauchen wir nicht. Bis Donnerstag!",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-5",
+    "questionId": "m5-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Ansage des Notfall-Sperrdienstes: Haben Sie Ihre Bankkarte oder Kreditkarte verloren? Sie erreichen den bundesweiten Sperr-Notruf jederzeit gebührenfrei unter der Telefonnummer 116 116. Halten Sie bitte Ihre IBAN bereit.",
+    "outputFile": "public\\audio\\modellsatz-5\\m5-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag, Alpenhotel Garmisch! Was kann ich für Sie tun? - Guten Tag, ich möchte ein Doppelzimmer reservieren. Wir kommen am Freitag an und reisen am Montag nach dem Frühstück ab. - Sehr gerne, also von Freitag bis Montag, das sind drei Übernachtungen.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Kostet das Zimmer 89 Euro pro Nacht? - Ja, genau. Und das reichhaltige Frühstücksbuffet von 7 bis 10 Uhr ist bereits im Preis inbegriffen. Das Abendessen in unserer Gaststube können Sie auf Wunsch separat dazubuchen. - Perfekt, mit Frühstück reicht uns völlig.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Entschuldigung an der Rezeption, wann fährt morgens der kostenlose Skibus zur Bergbahn? - Früher fuhr er viertel nach acht. Aber ab dieser Wintersaison fährt der Bus immer um viertel vor neun, also 8 Uhr 45, direkt vor dem Haupteingang ab. - Wunderbar, 8:45 Uhr passt ideal.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Hallo Rezeption? Hier spricht Frau Sommer aus Zimmer 204. Ich habe eben ausgecheckt, aber ich vermisse mein weißes Handyladekabel. Liegt das noch auf dem Nachttisch? Meinen Pass und die Sonnenbrille habe ich in der Handtasche. - Einen Moment ... Ja, das weiße Kabel liegt hier. Ich gebe es Ihnen sofort.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Guten Tag, wir interessieren uns für Ihr Ferienhaus an der Ostsee. Wie weit ist es denn zu Fuß zum Strand? - Zum Zentrum und Supermarkt sind es etwa 800 Meter, aber zum Sandstrand gehen Sie durch den kleinen Kiefernwald nur knapp 200 Meter, also maximal 3 Minuten zu Fuß. - Das ist ja fantastisch nah!",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Hallo Herr Meier, da Sie erst um 21 Uhr ankommen, ist unser Büro leider schon geschlossen. Wir hinterlegen Ihren Wohnungsschlüssel in der Schlüsselbox rechts neben der Haustür. Der Code lautet 4-9-2-1. - Super, Schlüsselbox mit Code ist sehr bequem.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Liebe Feriengäste in Heidelberg! Unsere beliebte historische Stadtführung zu Fuß durch die Altstadt startet heute Nachmittag pünktlich um 14 Uhr 30 vor dem Rathaus am Marktplatz. Tickets gibt es direkt beim Stadtführer.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Information für unsere Hotelgäste: Die Saunalandschaft und das Schwimmbad schließen heute wegen Reinigungsarbeiten bereits um 20:00 Uhr. Morgen früh öffnen wir wieder ab 7 Uhr.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Achtung Bergbesucher: Wegen schwerer Sturmböen auf dem Berggipfel muss der Betrieb der Panoramaseilbahn für den gesamten heutigen Tag aus Sicherheitsgründen eingestellt werden. Die Wanderwege im Tal bleiben geöffnet.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Willkommen im Parkhotel Dresden. Wir freuen uns, Ihnen mitteilen zu können: Das Parken auf unserem Hotelparkplatz und in der Tiefgarage ist während Ihres gesamten Aufenthalts für alle Übernachtungsgäste vollkommen kostenlos!",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Frau Lehmann, hier ist Reisebüro Sonnenschein. Ihre Reiseunterlagen und Hotelgutscheine für Ihren Mallorca-Urlaub liegen ab sofort bei uns im Reisebüro zur Abholung bereit. Sie können sie heute bis 18 Uhr abholen. Viele Grüße!",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Automatische Ansage des Hotelinformationssystems: Sehr geehrte Gäste, wir erinnern Sie höflich daran: Der Check-out am Abreisetag erfolgt bis spätestens 11:00 Uhr vormittags. Ein Late-Check-out bis 14 Uhr ist gegen Aufpreis an der Rezeption buchbar.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Guten Tag Herr Lehmann, Pension Bergkristall hier. Bitte beachten Sie: Die örtliche Kurtaxe der Gemeinde beträgt 2 Euro 80 pro Erwachsenem und Tag. Kinder bis 14 Jahre zahlen nur 1,50 Euro. Sie erhalten dafür die Gästekarte für Busse und Ermäßigungen.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Hallo Familie Lehmann, bezüglich Ihrer Anfrage zu Haustieren: In unserer Ferienwohnung 1 im Erdgeschoss ist ein kleiner Hund nach vorheriger Anmeldung herzlich willkommen. Katzen oder andere Tiere können wir aus Rücksicht auf Allergiker leider nicht erlauben.",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-6",
+    "questionId": "m6-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hallo Herr Lehmann, bitte denken Sie vor Ihrer Abreise morgen daran: Sie müssen die Wohnung besenrein hinterlassen. Bitte entsorgen Sie den gesamten Müll in die Mülltonnen im Innenhof. Die Bettwäsche und Endreinigung übernehmen wir. Gute Heimfahrt!",
+    "outputFile": "public\\audio\\modellsatz-6\\m6-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag Praxis Dr. Weiß, was kann ich für Sie tun? - Guten Tag, Hoffmann hier. Ich habe starke Zahnschmerzen und brauche einen Termin. Ginge es am Dienstagvormittag? - Am Dienstag ist leider alles voll. Aber am Donnerstag um 15 Uhr 30 hätten wir einen Termin frei. - Donnerstag um halb vier? Ja, das passt mir gut.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Hier ist Ihr Rezept für die Schmerztabletten. Nehmen Sie bitte morgens nach dem Frühstück eine Tablette und abends nach dem Abendessen noch eine. Also genau zweimal am Tag mit reichlich Wasser nach dem Essen. - Alles klar, vielen Dank Herr Doktor!",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Guten Morgen! Sie sind zum ersten Mal bei uns in der Praxis. Haben Sie Ihren Ausweis und Ihren Impfpass dabei? - Ja, hier sind mein Ausweis und der Impfausweis. Aber meine Gesundheitskarte der Krankenkasse habe ich zu Hause in der anderen Tasche vergessen! - Oh je, die Versichertenkarte müssen Sie uns bitte bis morgen nachreichen.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Guten Tag, hier ist mein rotes Kassenrezept für das Antibiotikum. - Guten Tag! Das Medikament kostet eigentlich 18,50 Euro, aber auf Kassenrezept zahlen Sie nur die gesetzliche Zuzahlung von 5 Euro. - Prima, hier sind 5 Euro.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Guten Tag Herr Walter, wo tut es Ihnen weh? - Wissen Sie, ich habe seit drei Tagen beim Sitzen und Bücken furchtbare Schmerzen im unteren Rücken. Kopfschmerzen oder Magenprobleme habe ich zum Glück nicht, nur der Rücken schmerzt sehr. - Gut, machen Sie bitte den Oberkörper frei.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Sie haben eine schwere Grippe mit Fieber. Ich schreibe Sie für den Rest dieser Woche bis einschließlich Freitag krank. Am Wochenende sollten Sie sich noch schonen, und nächsten Montag können Sie wieder arbeiten gehen, wenn Sie fieberfrei sind. - Danke Herr Doktor.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Apotheken-Notdienstansage der Stadt Wiesbaden: Heute Nacht hat für dringende Notfälle die Sonnen-Apotheke am Marktplatz 4 durchgehend Notdienst von 18 Uhr abends bis morgen früh um 8 Uhr. Bitte klingeln Sie an der Notdienstglocke.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Durchsage in der Poliklinik: Alle Patientinnen und Patienten mit festem Vor-Termin nehmen bitte in Wartezimmer 1 Platz. Akute Notfälle und Patienten ohne vorherige Terminvereinbarung begeben sich bitte direkt in Wartezimmer 2.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Achtung wichtige Durchsage im St. Josefs Hospital: Zur Vermeidung von Störungen an medizinischen Überwachungsgeräten ist das Telefonieren mit Mobiltelefonen im gesamten Klinikgebäude strengstens verboten. Bitte schalten Sie Ihre Geräte aus.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Liebe Besucherinnen und Besucher: Die Besuchszeit für Normalstationen endet um 20 Uhr. Auf der Intensivstation und der Kinderstation sind Besuche heute jedoch nur bis 17 Uhr gestattet. Wir bitten um Ihr Verständnis.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Frau Yilmaz, hier ist die Praxis Dr. Bergmann. Frau Doktor lässt ausrichten: Ihre Blutwerte aus dem Labor sind eingetroffen. Die Werte sind alle völlig in Ordnung, Sie müssen sich keine Sorgen machen und brauchen kein neues Rezept. Einen schönen Tag!",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Anrufbeantworter Praxis Dr. Sommer: Unsere Anmeldung öffnet um 7:30 Uhr. Die offene Akutsprechstunde für Patienten ohne Termin beginnt morgens pünktlich um 8:00 Uhr und endet um 9:30 Uhr. Bitte bringen Sie Ihre Versichertenkarte mit.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Herr Hoffmann, hier ist noch einmal die Praxis. Zur Erinnerung für Ihre Blutabnahme morgen früh um 8 Uhr: Bitte kommen Sie unbedingt nüchtern, das heißt vor dem Termin bitte nichts essen und keinen Kaffee oder Tee mit Zucker trinken. Ein Glas stilles Wasser ist erlaubt.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Sie rufen außerhalb unserer Sprechzeiten an. In lebensbedrohlichen Notfällen wählen Sie bitte sofort den Notruf 112. Den ärztlichen Bereitschaftsdienst für nicht lebensbedrohliche Erkrankungen am Wochenende erreichen Sie unter 116 117.",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-7",
+    "questionId": "m7-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hallo Frau Yilmaz, Ihr Folgerezept für Blutdrucktabletten wurde vom Arzt unterschrieben. Da die Praxis heute Nachmittag geschlossen ist, können Sie das Rezept morgen ab 14:00 Uhr an der Rezeption abholen. Auf Wiederhören!",
+    "outputFile": "public\\audio\\modellsatz-7\\m7-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag Herr Schneider, ich rufe wegen Ihrer Wohnungsanzeige an. Wie viel kostet die Wohnung im Monat? - Die Kaltmiete beträgt 650 Euro. Dazu kommen monatlich 150 Euro Nebenkosten für Heizung, Wasser und Müll. Die Warmmiete liegt also bei genau 800 Euro. - 800 Euro warm? Das passt gut in mein Budget.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Gibt es in dem Haus eigentlich einen Aufzug? - Nein, leider nicht. Aber die Wohnung liegt nicht ganz oben im 3. Stock, sondern bequem im 2. Obergeschoss. Im Erdgeschoss wohnt die Vermieterin. - Alles klar, 2. Stock ohne Fahrstuhl schaffe ich problemlos.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Wann kann ich mir die Wohnung anschauen? Ginge es am Samstagnachmittag? - Samstagnachmittag bin ich leider nicht in der Stadt. Aber am Samstagvormittag um 11 Uhr mache ich Besichtigungen. Passt Ihnen das? - Ja, Samstag um elf Uhr vormittags passt mir perfekt!",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Ist die Küche schon möbliert? - Ja, es gibt eine voll ausgestattete Einbauküche mit Herd und Kühlschrank sowie einen geräumigen Kellerraum im Untergeschoss. Nur einen Balkon hat die Wohnung leider nicht. - Schade, aber eine Einbauküche ist mir wichtiger.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Wie viel Kaution muss ich vor dem Einzug hinterlegen? - Die gesetzliche Kaution beträgt drei Monatskaltmieten. Bei 650 Euro Kaltmiete sind das insgesamt 1.950 Euro Kaution auf einem Sperrkonto. - Gut, das überweise ich vor der Schlüsselübergabe.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Hallo Herr Berger, hier spricht Krause aus dem 1. Stock. Haben Sie in Ihrer Wohnung auch keine Heizung? Bei mir sind die Heizkörper seit heute Morgen eiskalt und das Warmwasser geht auch nicht. Ich habe schon den Notdienst der Hausverwaltung angerufen. - Oje, danke für die Warnung, ich teste gleich meine Heizung.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Achtung wichtige Durchsage für alle Bewohner des Hauses Lindenstraße 40: Wegen dringender Rohrarbeiten an der Hauptwasserleitung im Keller wird heute Nachmittag von 13:00 bis 16:30 Uhr die gesamte Wasserversorgung abgestellt. Bitte halten Sie ausreichend Trinkwasser bereit.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Hinweis der Hausverwaltung für alle Mieter: Aus Brandschutzgründen ist das Abstellen von Fahrrädern, Rollern und Kinderwagen im Hausflur und auf den Treppenfluren strikt untersagt. Bitte parken Sie Ihre Räder ausschließlich im Fahrradkeller.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Erinnerung an die Hausordnung: Liebe Hausgemeinschaft, die gesetzlichen Ruhezeiten gelten abends von 22:00 bis morgens 07:00 Uhr sowie ganztägig an Sonn- und Feiertagen. Eine Mittagsruhe gibt es laut aktuellem Mietvertrag nicht mehr.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Mitteilung des Stadtbetriebs Abfallwirtschaft: Der kostenlose Sperrmüll für den Bezirk Nord findet am kommenden Donnerstag statt. Alte Möbel und Matratzen können am Mittwochabend ab 19 Uhr an den Straßenrand gestellt werden.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Frau Berger, hier ist der Kundendienst Elektro-Müller. Wir haben Ihre Meldung über die defekte Waschmaschine erhalten. Unser Techniker kann am Dienstag nach dem Mittag zwischen 14 und 16 Uhr zu Ihnen kommen. Bitte stellen Sie sicher, dass jemand zu Hause ist. Danke!",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Hallo Herr Berger, hier spricht Ihr Vermieter. Zur Wohnungsübergabe und Protokollierung am Freitag um 16 Uhr bringen Sie bitte unbedingt alle 3 Originalschlüssel mit, auch den für den Briefkasten und den Keller. Das Übergabeprotokoll bringe ich mit. Bis Freitag!",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Nachbarn, hier ist Frank vom 4. Stock. Der Paketbote hat heute Morgen ein großes Paket für Sie abgegeben. Da ich gleich zur Arbeit musste, habe ich es beim Hausmeister Herrn Vogel im Erdgeschoss abgegeben. Sie können es heute bis 18 Uhr bei ihm abholen. Schönes Wochenende!",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Wichtige Mitteilung der Hausverwaltung: Gemäß Paragraf 4 Ihres Mietvertrages ist die Gesamtmiete monatlich im Voraus fällig und muss bis spätestens zum 3. Werktag des Monats auf unserem Bankkonto gutgeschrieben sein. Wir bitten um termingerechte Überweisung.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-8",
+    "questionId": "m8-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hier ist die Notfall-Ansage der Hausverwaltung Süd: Für Sanitär- und Heizungsnotfälle am Wochenende erreichen Sie unsere Notdienstzentrale rund um die Uhr unter der Telefonnummer 089 für München und dann 77 66 11. Ich wiederhole: 089 - 77 66 11.",
+    "outputFile": "public\\audio\\modellsatz-8\\m8-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Morgen! Was darf es sein? - Guten Morgen. Ich hätte gerne ein großes Vollkornbrot, bitte. - Gerne. Noch etwas Süßes dazu? Ein Croissant? - Nein danke, keine Süßigkeiten. Aber geben Sie mir bitte noch zwei Roggenbrötchen mit. - Sehr wohl: ein Vollkornbrot und zwei Roggenbrötchen.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Ristorante Da Vinci, guten Tag! - Hallo, ich möchte für heute Abend um 19:30 Uhr einen Tisch reservieren. Wir wollten erst zu viert kommen, aber meine Schwiegereltern sind überraschend zu Besuch gekommen. Wir sind jetzt also sechs Personen. Haben Sie einen Tisch für sechs? - Ja, für sechs Personen im Wintergarten haben wir Platz.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Was können Sie heute empfehlen? - Unser Rindergulasch mit Nudeln ist sehr beliebt, aber heute ganz frisch haben wir gebratene Forelle mit Salzkartoffeln und Salat. - Fisch klingt herrlich! Ich nehme bitte die Forelle. - Sehr gute Wahl!",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Guten Tag! Sind die Erdbeeren aus der Region? - Ja, frisch vom Bodensee! Die 500-Gramm-Schale kostet 2 Euro, aber wenn Sie ein ganzes Kilo nehmen, bekommen Sie das Kilo heute im Angebot für nur 3 Euro 50! - Wunderbar, dann nehme ich ein ganzes Kilo für 3,50 Euro.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Möchten Sie einen Kaffee oder einen heißen Tee trinken? - Nein danke, für Kaffee ist es mir heute zu heiß. Bringen Sie mir bitte einfach ein kaltes Mineralwasser, aber bitte still, also ohne Kohlensäure. - Sehr gerne, ein stilles Wasser.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Herr Ober, wir möchten bitte zahlen! - Gerne. Zusammen oder getrennt? - Wir möchten bitte getrennt zahlen. Und geht das bei Ihnen beiden mit EC-Karte? - Ja natürlich, Kartenzahlung am Tisch ist kein Problem.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Sehr geehrte Kundinnen und Kunden: Unser Markt hat heute wie an jedem Freitag bis 21:00 Uhr für Sie geöffnet. Bitte beachten Sie jedoch, dass unsere Frischetheke für Fleisch und Käse bereits um 20:00 Uhr schließt.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Aufgepasst liebe Frische-Liebhaber: Heute in unserer Obstabteilung: Knackige deutsche Bio-Äpfel der Sorte Elstar mit satten 30 Prozent Rabatt! Greifen Sie zu, solange der Vorrat reicht.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Kundeninformation: Bitte geben Sie Pfandflaschen und Getränkekästen ausschließlich an unseren automatischen Pfandautomaten am linken Seiteneingang ab. Eine Pfandrücknahme an den Kassen oder an der Information ist leider nicht möglich.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Veranstaltungshinweis der Stadt: Diesen Samstag und Sonntag erwartet Sie auf dem Marktplatz direkt vor dem Rathaus der italienische Schlemmermarkt mit originalem Parmesan, Olivenöl, Schinken und Weinen aus der Toskana. Eintritt frei!",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Herr Santos, hier spricht Restaurant Ratskeller. Ich rufe kurz an, um Ihre Tischreservierung für heute Abend um 19:00 Uhr für 4 Personen zu bestätigen. Wir haben einen schönen Tisch am Fenster für Sie vorbereitet. Wir freuen uns auf Ihren Besuch!",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Hallo Carlos, hier ist Tina. Nudeln und Tomaten haben wir noch genug zu Hause, die brauchst du nicht zu kaufen. Aber bitte bring aus dem Supermarkt noch eine Flasche gutes Olivenöl und ein Stück Parmesan mit, sonst können wir die Pasta nicht kochen. Bis nachher!",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Herr Santos, hier ist die Volkshochschule. Eine kurze Erinnerung an Ihren italienischen Kochkurs heute Abend: Treffpunkt in der Lehrküche ist ab 18:00 Uhr zum Händewaschen und Schürzenverteilen. Der eigentliche Kochunterricht beginnt um halb sieben, also 18:30 Uhr. Bringen Sie bitte Tupperdosen mit!",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Automatische Ansage Bistro Mittendrin: Unser wöchentlicher Mittagstisch: Ein Hauptgericht nach Wahl mit Salat kostet 8,90 Euro. Im Menü inklusive Tagessuppe und einem alkoholfreien Getränk zahlen Sie unschlagbare 11 Euro 50! Angebot gilt werktags von 11:30 bis 14 Uhr.",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-9",
+    "questionId": "m9-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Anrufbeantworter Gasthof zur Linde: Herzlich willkommen. Wir sind dienstags bis sonntags durchgehend ab 11:30 Uhr für Sie da. Bitte beachten Sie: Montags ist unser Ruhetag, an dem unser Gasthaus geschlossen bleibt. Ab Dienstag freuen wir uns auf Ihren Besuch!",
+    "outputFile": "public\\audio\\modellsatz-9\\m9-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Entschuldigung, fährt der ICE nach Hamburg von Gleis 4 ab? - Eigentlich laut Fahrplan von Gleis 4, ja. Aber wegen einer Weichenstörung fährt der Zug heute außerplanmäßig von Gleis 7 ab. Schauen Sie, da oben auf der Anzeigetafel steht es auch: Gleis 7. - Oh vielen Dank, dann muss ich schnell rüber zu Gleis 7!",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Guten Tag, wie viel Verspätung hat denn der Regionalexpress nach Stuttgart? - Zuerst hieß es 15 Minuten. Aber der Fahrdienstleiter meldet soeben: Der Zug hat wegen eines Baustellenabschnitts jetzt leider 25 Minuten Verspätung. Voraussichtliche Ankunft ist um 16 Uhr 45. - Danke für die Information.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Guten Tag! Ich möchte am Samstag mit meiner Frau von Hannover nach Leipzig fahren. Gibt es ein günstiges Gruppenticket für Regionalzüge? - Ja, da empfehle ich Ihnen das Quer-durchs-Land-Ticket für 44 Euro für die erste Person und nur 9 Euro für die zweite Person. - Wunderbar, wir nehmen das Quer-durchs-Land-Ticket für zwei.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Entschuldigung, wie komme ich am schnellsten zum Flughafen? Fährt die U-Bahn dorthin? - Nein, die U-Bahn fährt nur bis zum Südbahnhof. Sie müssen die S-Bahn Linie S8 nehmen. Die S8 fährt alle 20 Minuten direkt zum Flughafenterminal. Ein Taxi würde über 60 Euro kosten. - Alles klar, ich nehme die S8.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Guten Tag, ich habe ein Ticket nach Frankfurt. Kann ich noch einen Sitzplatz am Fenster reservieren? - Ja natürlich. Die Sitzplatzreservierung in der 2. Klasse kostet 4 Euro 90 pro Person. Möchten Sie Großraum oder Abteil? - Großraum am Fenster, bitte. Hier sind 4 Euro 90.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Entschuldigung, wo fahren die Busse für den Schienenersatzverkehr ab? - Gehen Sie durch die Haupthalle nach draußen auf den Bahnhofsvorplatz. Die gelben Ersatzbusse halten direkt vor dem Haupteingang an Haltestelle A. - Vielen Dank für die Hilfe!",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Achtung am Bahnsteig 5: Intercity 2048 nach Dortmund fährt heute ausnahmsweise nur bis Köln Hauptbahnhof. Fahrgäste nach Düsseldorf, Essen und Dortmund steigen bitte in Köln Hbf in den ICE 612 auf Gleis 8 um. Wir bitten um Entschuldigung.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Sehr geehrte Fahrgäste im ICE nach Berlin: Unser Bordrestaurant in Wagen 9 hat ab sofort für Sie geöffnet! Genießen Sie frisch gebrühten Kaffee, kalte Getränke und warme Snacks. Unser Serviceteam freut sich auf Sie.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Sicherheitsdurchsage der Deutschen Bahn: Das Rauchen ist auf allen Bahnhöfen und Bahnsteigen grundsätzlich verboten. Bitte nutzen Sie ausschließlich die gelb markierten Raucherbereiche auf den Bahnsteigen.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Wichtiger Hinweis der S-Bahn: Ein Ticketkauf im Zug beim Zugpersonal ist in unseren Nahverkehrszügen nicht möglich. Fahrgäste ohne gültigen Fahrschein müssen ein erhöhtes Beförderungsentgelt von 60 Euro zahlen.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Hallo Nina, hier ist Alex. Mein Zug von Frankfurt steht gerade auf offener Strecke, weil es Probleme mit den Signalen gibt. Wir haben schon 40 Minuten Verspätung. Ich komme also nicht um 18 Uhr, sondern erst gegen 18:45 Uhr am Hauptbahnhof an. Warte bitte drinnen im Café auf mich!",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Guten Tag Fundbüro der Deutschen Bahn, hier spricht Dr. Frank. Ich habe heute Morgen um 10 Uhr im ICE 773 von Hamburg nach Berlin meine braune Leder-Reisetasche vergessen. Sie lag in der Gepäckablage genau über Sitz 42 in Wagen 6. Bitte rufen Sie mich zurück!",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Automatische Hotline des Verkehrsverbunds: Das bundesweite Deutschlandticket kostet regulär 49 Euro im monatlich kündbaren Abonnement und gilt in allen Bussen, Straßenbahnen, U-Bahnen und Regionalzügen in ganz Deutschland. Für Studenten gibt es ein ermäßigtes Ticket für 29 Euro.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Hinweis zu Ihrem Sparpreis-Ticket: Eine kostenfreie Stornierung ist gemäß den Tarifbestimmungen nur bis einen Tag vor dem ersten Geltungstag online möglich. Ab dem Reisetag ist die Stornierung und Erstattung ausgeschlossen.",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-10",
+    "questionId": "m10-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hallo Sven, zur Erinnerung: Fahr mit der Straßenbahn Linie 3 bis zur Haltestelle Friedrichstraße. Nicht bis zum Rathausplatz! An der Friedrichstraße steigst du direkt in den Bus Linie 104 um und fährst drei Stationen bis zu mir. Bis gleich!",
+    "outputFile": "public\\audio\\modellsatz-10\\m10-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag! Kann ich Ihnen bei den Herrenhemden helfen? - Ja bitte. Ich habe dieses blaue Hemd anprobiert, aber in Größe M ist es mir an den Schultern zu eng. Haben Sie dasselbe Hemd noch in Größe L da? - Einen Moment, ich schaue nach ... Ja, hier ist das Hemd in Größe L (41/42). - Vielen Dank, das passt sicher besser!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Entschuldigung, was kostet diese braune Lederjacke? Auf dem Etikett stehen 149 Euro. - Ja, das war der alte Originalpreis. Letzte Woche war sie auf 99 Euro herabgesetzt, und heute im Finale-Sale kostet sie nur noch unschlagbare 79 Euro! - 79 Euro? Ein fantastischer Preis, die nehme ich sofort!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Entschuldigung an der Information: Wo finde ich bitte Schuhe für meinen 6-jährigen Sohn? - Damenschuhe sind im Erdgeschoss, Herrenschuhe im ersten Stock, und die gesamte Kinderabteilung mit Kinderschuhen und Spielwaren finden Sie ganz oben im 3. Stock direkt neben dem Restaurant. - Vielen Dank!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Guten Tag, ich möchte diesen roten Pullover umtauschen, er gefällt meiner Tochter leider nicht. - Haben Sie den Kassenbon dabei? - Nein, den Bon habe ich leider weggeworfen. Aber das Preisschild ist noch dran! - Es tut mir leid, ohne Kassenbeleg können wir laut unserer Firmenpolitik leider keinen Umtausch vornehmen.",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Möchten Sie die Mütze in Schwarz oder Grau? - Schwarz finde ich etwas langweilig und Grau wird so schnell schmutzig. Haben Sie die auch in Blau? - Ja, hier ist ein schönes Dunkelblau. - Perfekt, Dunkelblau passt genau zu meiner Winterjacke!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Das macht zusammen 54 Euro. - Ich habe hier noch einen Geschenkgutschein über 20 Euro. Kann ich den verrechnen? - Ja natürlich. Dann bleiben noch 34 Euro Rest. Zahlen Sie bar oder mit Karte? - Die restlichen 34 Euro zahle ich mit EC-Karte, bitte.",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Sehr geehrte Kundinnen und Kunden der Schloss-Galerie: Unser Center schließt in 15 Minuten um 20:00 Uhr. Bitte begeben Sie sich nun zu den Kassen. Die Tiefgarage bleibt für die Ausfahrt noch bis 21:00 Uhr geöffnet. Wir wünschen einen schönen Feierabend!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Aktion in der Hosenabteilung im 2. Obergeschoss: Kaufen Sie heute zwei Jeans oder Stoffhosen Ihrer Wahl, und Sie erhalten auf die günstigere zweite Hose 50 Prozent Preisnachlass! Greifen Sie jetzt zu!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Sicherheitshinweis: Bitte beachten Sie: Aus Sicherheitsgründen dürfen Sie maximal 4 Kleidungsstücke gleichzeitig mit in die Umkleidekabine nehmen. Ihre Handtaschen und Rucksäcke dürfen Sie selbstverständlich bei sich behalten.",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Service-Durchsage: Unser hauseigener Änderungsservice im 4. Stock hat heute für Sie geöffnet! Lassen Sie Ihre neu gekauften Hosen und Röcke heute noch innerhalb von nur einer Stunde kostenlos anpassen.",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Frau Schneider, hier ist Boutique Elegance. Das Sommerkleid in Dunkelgrün, das Sie in Größe 38 nachbestellt hatten, ist soeben bei uns in der Filiale angeliefert worden. Wir legen es bis Samstag an der Kasse für Sie zurück. Auf Wiederhören!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Automatische Ansage Schuhhaus Roland: Wir bieten Ihnen erstklassigen Kundenservice. Reguläre sowie reduzierte Schuhe können Sie bei Nichtgefallen innerhalb von 14 Tagen gegen Vorlage des Kassenbons problemlos umtauschen oder den Kaufpreis zurückerhalten.",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo David, hier ist Sarah. Ich stehe gerade vor der Paketstation, um deine bestellten Schuhe zurückzuschicken. Du hast mir den Karton gegeben, aber im Karton liegt gar kein Retourenschein mit dem Strichcode! Schick mir bitte den QR-Code schnell per WhatsApp auf mein Handy. Danke!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Willkommen bei Modehaus Trend24. Ab einem Einkaufswert von 49 Euro liefern wir alle Pakete innerhalb Deutschlands versandkostenfrei zu Ihnen nach Hause. Bei Bestellungen unter 49 Euro berechnen wir eine Versandpauschale von 4 Euro 95.",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-11",
+    "questionId": "m11-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hi Lena, hier ist Maria. Wollen wir uns für unsere Shoppingtour gleich um 15 Uhr treffen? Vor Zara ist es immer viel zu voll. Lass uns doch lieber gemütlich im Eiscafé Venezia im Erdgeschoss bei einer Kugel Eis treffen und dann losgehen. Bis gleich!",
+    "outputFile": "public\\audio\\modellsatz-11\\m11-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Hallo Nina! Trainiert ihr im Sportverein immer montags? - Nein, montags und mittwochs trainieren die Herren. Wir Frauen haben unser Mannschaftstraining immer dienstags und donnerstags von 19 bis 21 Uhr auf dem Kunstrasenplatz. - Toll, dann komme ich nächsten Dienstag mal zum Probetraining vorbei!",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t1-q2",
+    "teil": 2,
+    "questionNumber": 2,
+    "audioScript": "Guten Tag! Ich interessiere mich für eine Mitgliedschaft. Was kostet der Monatsbeitrag bei Ihnen? - Bei einem 2-Jahres-Vertrag zahlen Sie 39,90 Euro. Aber wenn Sie sich heute für unser Sommer-Abo mit 12 Monaten Laufzeit entscheiden, zahlen Sie nur 29 Euro 90 pro Monat inklusive Sauna und Getränkeflatrate! - 29,90 Euro klingt super, das nehme ich.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Was brauche ich morgen für mein erstes Fitnesstraining? Brauche ich ein ärztliches Attest? - Nein, ein Attest brauchen Sie nicht. Bringen Sie einfach bequeme Sportkleidung, saubere Hallenturnschuhe mit heller Sohle und ein großes Handtuch für die Trainingsgeräte mit. - Alles klar, Schuhe und Handtuch packe ich ein.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Wann fängt der Yogakurs am Samstagmorgen an? Um neun? - Nein, um 9:00 Uhr ist Pilates. Der Yogakurs für Anfänger beginnt um viertel nach zehn, also 10 Uhr 15, in Kursraum 2. Danach um 11:30 Uhr kommt noch Zumba. - Danke, viertel nach zehn passt mir sehr gut.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Lukas, möchtest du im Sportverein Basketball oder Schwimmen machen? - Basketball spielen wir schon in der Schule und Schwimmen ist mir im Winter zu kalt. Mein bester Freund Paul macht Judo und lernt Selbstverteidigung. Das will ich auch unbedingt ausprobieren! - Gut, dann melde ich dich zum Judo-Schnupperkurs an.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Hallo Sabine, wo ist morgen früh der Treffpunkt für unsere Laufgruppe? Nicht am Rathaus wie sonst, oder? - Richtig, wegen des Marktes treffen wir uns diesmal direkt am großen Tor zum Stadtpark um 8 Uhr 30. - Super, dann bin ich um halb neun am Parktor.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Achtung wichtige Durchsage im Stadtbad: Wegen vorhergesagter starker Gewitter und kühler Temperaturen bleibt das Außenbecken im Freibad morgen Vormittag geschlossen. Der Einlass ins Freibad öffnet erst ab 13:00 Uhr mittags. Das Hallenbad ist wie gewohnt ab 8 Uhr geöffnet.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Liebe Mitglieder: Aus hygienischen Gründen bitten wir Sie herzlich: Bitte reinigen und desinfizieren Sie jedes benutzte Gerät nach dem Training mit dem bereitgestellten Desinfektionsmittel und Papiertüchern. Vielen Dank für Ihre Mithilfe!",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Durchsage des Hallenwarts: In der gesamten Dreifachsporthalle sind Turnschuhe mit abfärbenden schwarzen Sohlen strengstens verboten! Bitte tragen Sie ausschließlich saubere Hallenschuhe mit abriebfester heller Sohle.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Vereinsdurchsage: Trotz des leichten Nieselregens findet das Meisterschaftsspiel unserer 1. Mannschaft am Samstag wie geplant um 15:30 Uhr auf dem Rasenplatz statt. Wir freuen uns auf viele Zuschauer!",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Hallo Markus, hier spricht Trainer Jürgen. Wegen eines Rohrbruchs in der Schulsporthalle ist die Halle heute Abend leider gesperrt. Unser Basketballtraining fällt heute also aus. Nächste Woche Dienstag trainieren wir wieder wie gewohnt. Sag bitte den anderen auch Bescheid!",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Automatische Auskunft FitClub24: Gemäß den gesetzlichen Bestimmungen für Verbraucherverträge können Sie Ihren Vertrag mit einer Frist von einem Monat vor Ablauf der Vertragslaufzeit schriftlich oder online in Textform kündigen.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Information zum Buchungssystem für Gruppenkurse: Sollten Sie an einem gebuchten Spinning- oder Pilateskurs nicht teilnehmen können, stornieren Sie bitte Ihren Platz in der App bis spätestens 2 Stunden vor Kursbeginn, damit andere Mitglieder nachrücken können.",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Hallo Rezeption vom FitLife, hier spricht Wagner. Ich habe heute Vormittag in der Männerumkleide trainiert und auf der Holzbank bei Spind 45 meine schwarze Trinkflasche aus Metall liegen gelassen. Meine Uhr und mein Schloss habe ich in der Tasche. Könnten Sie nachschauen, ob die Flasche noch da ist?",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-12",
+    "questionId": "m12-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Willkommen bei PowerGym Fitness! Unsere Öffnungszeiten: Werktags montags bis freitags von 6 bis 23 Uhr. Samstags öffnen wir um 8 Uhr. An Sonn- und gesetzlichen Feiertagen begrüßen wir Sie von 9:00 bis 20:00 Uhr. Wir wünschen ein erfolgreiches Training!",
+    "outputFile": "public\\audio\\modellsatz-12\\m12-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag! Haben Sie schon ein Ticket am Automaten gezogen? - Ja, ich war am Touchscreen für Passangelegenheiten und habe den Zettel bekommen. Schauen Sie, hier steht: Wartenummer B 214. Am Schalter wird gerade erst B 205 aufgerufen. - Alles klar, bei B 214 müssen Sie ungefähr noch 15 Minuten warten.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Guten Tag, ich möchte meinen neuen Wohnsitz in Leipzig anmelden. Hier ist mein Reisepass. - Danke. Haben Sie auch die vom Vermieter unterschriebene Wohnungsgeberbestätigung dabei? - Oh, ich habe nur den Mietvertrag mitgebracht. Reicht der nicht? - Nein, seit einigen Jahren ist die offizielle Wohnungsgeberbestätigung gesetzlich vorgeschrieben. Bitte reichen Sie diese nach.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Wie viel kostet die Ausstellung des neuen biometrischen Reisepasses? - Für Personen unter 24 Jahren kostet er 37,50 Euro. Für Erwachsene ab 24 Jahren beträgt die Gebühr 70 Euro. - Gut, dann zahle ich die 70 Euro gleich mit EC-Karte.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Entschuldigung, an welchem Schalter werden Zeugnisse beglaubigt? - An Schalter 2 machen wir nur Führerscheinumtausch. Für amtliche Beglaubigungen von Zeugnissen und Urkunden gehen Sie bitte direkt an Schalter 5 im 1. Stock. - Herzlichen Dank!",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Wann kann ich meinen fertigen Personalausweis abholen? - Die Bundesdruckerei in Berlin braucht aktuell ungefähr zwei bis drei Wochen. Sobald der Brief mit Ihrer PIN bei Ihnen zu Hause ankommt, liegt der Ausweis bei uns zur Abholung bereit. - Perfekt, 2 bis 3 Wochen ist schnell.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Kann ich dieses Urlaubsfoto für den Pass verwenden? - Nein, für Ausweise gelten strenge biometrische Vorgaben: Der Hintergrund muss einfarbig hell sein und Sie dürfen nicht lächeln, der Mund muss geschlossen sein. Wir haben drüben einen Fotoautomaten für 8 Euro. - Danke, dann nutze ich den Automaten.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Ansage für die Bürgerinnen und Bürger der Stadt Dortmund: Bitte beachten Sie unsere geänderten Öffnungszeiten: Montags bis mittwochs von 8 bis 13 Uhr. Jeden Donnerstag bieten wir unseren langen Bürgertag bis 18:00 Uhr an. Freitags ist um 12:30 Uhr Annahmeschluss.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Kundenhinweis Standesamt: Zur Anmeldung von Eheschließungen oder Geburtsbeurkundungen bitten wir Sie, Ihren Wunschtermin bequem online über das Serviceportal der Stadtverwaltung zu buchen. Eine persönliche Terminvergabe vor Ort ist leider nicht möglich.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Wichtige Mitteilung der Ausländerbehörde: Aufgrund einer ganztägigen internen Personalversammlung bleibt unsere Dienststelle am morgigen Mittwoch für den gesamten Publikumsverkehr geschlossen. Bereits vereinbarte Termine werden verschoben.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Zahlungshinweis Bürgeramt: Bitte beachten Sie: An allen Schaltern unserer Behörde ist ab sofort ausschließlich die bargeldlose Bezahlung mit EC-Karte, Debitkarte oder Kreditkarte möglich. Bargeld wird nicht mehr angenommen.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Guten Tag Herr Chen, hier ist Weber von der Ausländerbehörde Frankfurt. Eine erfreuliche Nachricht: Ihre elektronische Aufenthaltskarte liegt ab sofort zur Abholung an Schalter 12 für Sie bereit. Bitte bringen Sie Ihren alten Pass und die Gebührenquittung mit. Auf Wiederhören!",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Automatische Auskunft des Meldeamtes: Nach dem Bundesmeldegesetz sind Sie gesetzlich verpflichtet, jeden Wohnungswechsel innerhalb einer Frist von zwei Wochen nach dem Einzug persönlich beim zuständigen Einwohnermeldeamt anzumelden.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Herr Chen, hier ist das Bürgerbüro Süd. Zur Erinnerung für Ihren Termin morgen um 11:30 Uhr: Bitte bringen Sie ein aktuelles biometrisches Passfoto sowie Ihre originale Geburtsurkunde mit amtlicher Übersetzung mit. Kontoauszüge oder Gehaltszettel brauchen wir nicht.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Ansage Rathaus-Zentrale: Führungszeugnisse erhalten Sie in Zimmer 104 im Erdgeschoss. Das Büro für amtliche Beglaubigungen von Dokumenten und Unterschriften befindet sich im zweiten Stock in Zimmer 208. Das Standesamt finden Sie in Zimmer 312.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-13",
+    "questionId": "m13-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Zentrales Fundbüro der Stadtverwaltung: Haben Sie Schlüssel, Geldbörsen oder Fahrräder verloren? Unsere Öffnungszeiten für den Publikumsverkehr: Wir haben ausschließlich dienstags von 9 bis 13 Uhr sowie donnerstags von 14 bis 18 Uhr geöffnet. Montags, mittwochs und freitags ist geschlossen.",
+    "outputFile": "public\\audio\\modellsatz-13\\m13-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Hallo David! Machen wir Lisas Überraschungsparty am Freitag? - Nein, am Freitag muss Lisa bis spät abends in der Klinik arbeiten. Wir feiern am Samstag! Wir treffen uns alle um halb acht, also 19:30 Uhr, bei mir in der Wohnung, und um acht kommt Lisa. - Perfekt, Samstag um 19:30 Uhr bin ich da.",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Hi Jan, kommst du morgen zu unserem Grillfest im Garten? - Ja sehr gerne! Was soll ich mitbringen? Braucht ihr noch Grillkohle oder Würstchen? - Nein, Fleisch und Kohle haben wir schon besorgt. Aber könntest du vielleicht deinen leckeren Nudelsalat machen und zwei frische Baguettes mitbringen? - Geht klar, Nudelsalat und Baguette bringe ich mit!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Habt ihr schon eine Geschenkidee für Timo? - Ich wollte ihm erst ein Kochbuch schenken, aber er kocht eigentlich nie. Wir haben zusammengelegt und schenken ihm einen Gutschein für den neuen Hochseil-Kletterpark! Da wollte er schon immer mal hin. - Tolle Idee, ein Klettergutschein ist perfekt.",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Guten Tag Herr Bauer, wo findet unser Vereinsfest morgen statt? Es soll doch regnen! - Keine Sorge. Bei Sonnenschein wären wir draußen am See gewesen, aber da es regnet, verlegen wir die Feier komplett in den großen Saal unseres Vereinsheims am Sportplatz. Es gibt dort eine Bar und Musik. - Wunderbar, im Vereinsheim bleiben wir trocken.",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Hallo Katja! Herr Becker verlässt ja Ende des Monats unsere Abteilung. Sammeln wir Geld für einen Präsentkorb? - Ja, wir sammeln von jedem Kollegen genau 10 Euro ein. Wir sind zwölf Mitarbeiter, also haben wir 120 Euro für ein schönes Geschenk. - Prima, hier sind meine 10 Euro.",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Kommt Petra am Samstag auch zu Martins Hochzeit? - Leider nein. Sie hat versucht, ihre Schicht zu tauschen, aber es hat nicht geklappt. Sie muss am Samstagabend im Krankenhaus Nachtdienst machen und kann nicht fehlen. Sie schickt aber ein Glückwunschtelegramm. - Ach, wie schade!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Ansage für alle Besucher des Seefestes: Der Höhepunkt unseres heutigen Abends, das große Musikfeuerwerk über dem See, startet pünktlich um 22:30 Uhr. Bitte begeben Sie sich rechtzeitig an die Uferpromenade. Wir wünschen ein unvergessliches Erlebnis!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Sicherheitshinweis für das Sommer-Open-Air: Aus Sicherheitsgründen ist das Mitbringen von Glasflaschen, Dosen und eigenen alkoholischen Getränken auf das gesamte Konzertgelände streng verboten! Am Einlass finden Taschenkontrollen statt.",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Information für Familien: Unser buntes Spiel- und Bastelzelt mit professioneller Kinderbetreuung im Bürgerpark hat heute von 11 bis 18 Uhr geöffnet. Das Angebot ist dank städtischer Förderung für alle Familien vollkommen kostenfrei!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Fahrplanhinweis der Stadtwerke: Für die Besucher des Altstadtfestes verkehren zusätzliche Shuttlebusse im 15-Minuten-Takt. Die letzte Rückfahrt in alle Stadtteile erfolgt heute Nacht um 01:30 Uhr ab Haltestelle Marktplatz.",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Hi Markus, hier ist Tobias! Vielen Dank für die Einladung zu deiner Einweihungsparty am Samstag. Ich komme super gerne! Wenn es für dich in Ordnung ist, bringe ich meine Freundin Laura auch gleich mit. Sollen wir noch einen Kasten Bier oder Chips mitbringen? Sag kurz Bescheid!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Hallo liebe Freunde, hier ist Sophie. Zu meiner Geburtstagsfeier am 20. Mai im Gartenrestaurant: Damit ich das Essen für das Buffet bestellen kann, gebt mir bitte unbedingt bis spätestens Freitag, den 12. Mai, Bescheid, ob ihr kommt. Ich freue mich auf euch!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Sarah, hier ist Oma. Für den Geburtstag von Leo morgen: Ich wollte erst einen Erdbeerkuchen machen, aber Leo liebt doch Schokolade so sehr. Ich backe jetzt einen großen Schokoladenkuchen mit bunten Smarties drauf. Bringt ihr bitte die Kerzen mit? Bis morgen!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Liebe Mitarbeiterinnen und Mitarbeiter: Eine kurze Erinnerung an unsere 50-Jahr-Firmenfeier im Kurhaus am Samstag: Die Geschäftsleitung bittet um elegante Abendgarderobe, also dunkler Anzug mit Krawatte für die Herren und Cocktailkleid oder Hosenanzug für die Damen. Wir freuen uns auf einen festlichen Abend!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-14",
+    "questionId": "m14-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Hallo Herr Hoffmann, zur Hochzeitseinladung von Claudia und Martin: Die Trauung in der Kirche endet um 18 Uhr. Der Sektempfang im Festsaal beginnt um halb sieben, also 18:30 Uhr, und das Abendessen wird um viertel nach sieben serviert. Bis Samstag!",
+    "outputFile": "public\\audio\\modellsatz-14\\m14-h-t3-q15.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t1-q1",
+    "teil": 1,
+    "questionNumber": 1,
+    "audioScript": "Guten Tag! Ich habe gerade meine A1-Prüfung bestanden und möchte den A2-Kurs buchen. Gibt es im September noch freie Plätze? - Im Septemberkurs sind leider alle 15 Plätze restlos ausgebucht. Aber unser nächster neuer A2-Abendkurs startet am 6. Oktober. Da haben wir noch freie Plätze. - Prima, dann melde ich mich für den Oktoberkurs an!",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t1-q1.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t1-q2",
+    "teil": 1,
+    "questionNumber": 2,
+    "audioScript": "Frau Keller, arbeiten Sie Vollzeit bei uns in der Firma? - Früher habe ich Vollzeit 40 Stunden gearbeitet. Aber seit der Geburt meiner Zwillinge habe ich auf Teilzeit reduziert. Ich arbeite jetzt genau 30 Stunden pro Woche, verteilt auf vier Tage. - 30 Stunden ist eine gute Aufteilung.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t1-q2.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t1-q3",
+    "teil": 1,
+    "questionNumber": 3,
+    "audioScript": "Guten Tag, mein Name ist Tariq Al-Mansoor. Ich habe um 14 Uhr ein Vorstellungsgespräch bei Frau Dr. Winter. - Herzlich willkommen! Gehen Sie bitte mit dem Aufzug in den 2. Stock. Das Vorstellungsgespräch findet im Konferenzraum 3 statt. Frau Winter erwartet Sie dort. - Vielen Dank!",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t1-q3.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t1-q4",
+    "teil": 1,
+    "questionNumber": 4,
+    "audioScript": "Hallo Jonas, kannst du bitte vor der Abteilungsbesprechung um 11 Uhr helfen? Den Laptop und Beamer hat Herr Schmidt schon aufgebaut, und Wasser steht schon auf dem Tisch. Aber könntest du bitte diese Präsentation zehnmal für die Kollegen ausdrucken und lochen? - Ja klar, ich kopiere die Mappen sofort.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t1-q4.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t1-q5",
+    "teil": 1,
+    "questionNumber": 5,
+    "audioScript": "Wann fängt deine Schicht morgen an? - Morgen habe ich die Frühschicht. Die Arbeitszeit beginnt pünktlich um 06:00 Uhr morgens, aber die Umkleideräume öffnen ab 5:30 Uhr. Um 14:30 Uhr ist dann Schichtende. - Oje, 6 Uhr morgens ist ganz schön früh!",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t1-q5.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t1-q6",
+    "teil": 1,
+    "questionNumber": 6,
+    "audioScript": "Guten Tag bei der Sprachberatung. Reicht mein A1-Zertifikat für den Einbürgerungsantrag? - Für die Einbürgerung in Deutschland reicht das Niveau A1 leider nicht aus. Der Gesetzgeber verlangt mindestens das Sprachniveau B1, also das Goethe-Zertifikat B1 oder den Deutsch-Test für Zuwanderer (DTZ). - Alles klar, dann lerne ich weiter bis B1.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t1-q6.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t2-q7",
+    "teil": 2,
+    "questionNumber": 7,
+    "audioScript": "Durchsage für die Belegschaft: Heute ist Veggie-Tag in unserer Betriebskantine! Wir servieren cremiges Kürbisrisotto mit Salat für nur 4 Euro 50 sowie Falafel mit Hummus. Es gibt heute ausnahmsweise keine Fleischgerichte.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t2-q7.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t2-q8",
+    "teil": 2,
+    "questionNumber": 8,
+    "audioScript": "Achtung Sicherheitsdurchsage an alle Mitarbeiter: Heute Nachmittag um 14:00 Uhr findet im gesamten Werksgebäude eine angekündigte Feueralarm-Probeübung statt. Bitte verlassen Sie bei Ertönen der Sirene ruhig über die Notausgänge das Gebäude und versammeln Sie sich auf Sammelplatz 2.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t2-q8.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t2-q9",
+    "teil": 2,
+    "questionNumber": 9,
+    "audioScript": "Wichtige Mitteilung des Betriebsrats: Die Parkplätze direkt vor dem Haupteingang sind ausschließlich für unsere Besucher und Kunden reserviert. Mitarbeiter nutzen bitte ausnahmslos das Parkhaus P3 auf der Rückseite des Geländes.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t2-q9.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t2-q10",
+    "teil": 2,
+    "questionNumber": 10,
+    "audioScript": "Prüfungshinweis des Prüfungszentrums: Alle Prüfungsteilnehmer für die Prüfung Goethe-Zertifikat A1 Start Deutsch 1 finden sich bitte morgen früh pünktlich um 08:30 Uhr zur Ausweiskontrolle vor Raum 201 ein. Der schriftliche Test beginnt um 09:00 Uhr.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t2-q10.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t3-q11",
+    "teil": 3,
+    "questionNumber": 11,
+    "audioScript": "Hallo Tariq, hier ist Bernd aus der Spätschicht. Du, ich habe ein riesiges Problem: Mein Sohn hat am Freitagnachmittag Schultheater und ich würde so gerne dabei sein. Könntest du am Freitag meine Spätschicht von 14 bis 22 Uhr übernehmen? Ich übernehme dafür deinen Dienst nächsten Samstag! Bitte ruf mich kurz zurück.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t3-q11.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t3-q12",
+    "teil": 3,
+    "questionNumber": 12,
+    "audioScript": "Mitteilung der Personalabteilung: Liebe Mitarbeiterinnen und Mitarbeiter, die Urlaubsplanung für die Sommermonate Juli und August hat begonnen. Bitte reichen Sie Ihre Urlaubsanträge im Mitarbeiterportal bis spätestens 31. März ein. Später eingereichte Anträge können eventuell nicht berücksichtigt werden.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t3-q12.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t3-q13",
+    "teil": 3,
+    "questionNumber": 13,
+    "audioScript": "Hallo Herr Al-Mansoor, hier spricht Frau Sommer von der Volkshochschule. Für Ihren B1-Integrationskurs ab nächster Woche benötigen Sie das Lehr- und Arbeitsbuch \"Schritte Plus Neu B1\", Band 1 und 2 vom Hueber-Verlag. Bitte besorgen Sie das Buch bis zur ersten Unterrichtsstunde.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t3-q13.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t3-q14",
+    "teil": 3,
+    "questionNumber": 14,
+    "audioScript": "Auskunft Personalbüro: Nach unserem Tarifvertrag steht Arbeitnehmern bei eigener Eheschließung ein bezahlter Sonderurlaub von genau zwei Arbeitstagen zu. Für einen Umzug aus betrieblichen Gründen erhalten Sie einen Tag. Bitte legen Sie die Heiratsurkunde vor.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t3-q14.mp3"
+  },
+  {
+    "examId": "modellsatz-15",
+    "questionId": "m15-h-t3-q15",
+    "teil": 3,
+    "questionNumber": 15,
+    "audioScript": "Prüfungssekretariat: Herzlichen Glückwunsch, Sie haben die A1-Prüfung bestanden! Die gedruckten offiziellen Zeugnisse mit Siegel treffen in ungefähr zwei Wochen bei uns ein. Sie erhalten eine Benachrichtigung per E-Mail, sobald Ihr Zertifikat abholbereit ist.",
+    "outputFile": "public\\audio\\modellsatz-15\\m15-h-t3-q15.mp3"
+  }
+]
